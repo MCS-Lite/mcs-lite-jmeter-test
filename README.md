@@ -2,21 +2,21 @@
 Use JMeter script to do API functional testing and server load/stability testing
 
 ## Setup Environment
-1. To install latest version of [JMeter](http://jmeter.apache.org/download_jmeter.cgi).
+1. To install [JMeter 2.13](https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-2.13.zip).
 2. To install the following JMeter plugins
 	
 	* [Throughput Shaping Timer](https://jmeter-plugins.org/wiki/ThroughputShapingTimer/)  	
-	* [Transactions per Second (3 Basic Graphs)](https://jmeter-plugins.org/wiki/TransactionsPerSecond/)
-	* [PerfMon (Servers Performance Monitoring)](https://jmeter-plugins.org/wiki/PerfMon/)
+	* [3 Basic Graphs](https://jmeter-plugins.org/wiki/TransactionsPerSecond/)
+	* [Servers Performance Monitoring](https://jmeter-plugins.org/wiki/PerfMon/)
 	* [WebSocket Sampler by Maciej Zaleski](https://github.com/maciejzaleski/JMeter-WebSocketSampler/wiki)
 	
 	All the plugins can all be managed by [Jmeter Plugins Manager](https://jmeter-plugins.org/wiki/PluginsManager/).
 	
-3. To extend JMeter library support for JSON by adding 3 *.jar files from [minimal-json](https://github.com/ralfstx/minimal-json/releases) to ${JMeterRoot}/lib/ext folder.
+3. To extend JMeter library support for JSON by adding 3 minimal-json-0.9.4*.jar files from [minimal-json](https://github.com/ralfstx/minimal-json/releases) to ${JMeterRoot}/lib/ext folder.
 
 ## Get Started
-Launch ApacheJMeter.jar, which is under ${JMeterRoot}/bin folder.
-
+1. Launch ApacheJMeter.jar, which is under ${JMeterRoot}/bin folder.
+2. Open the test script in JMeter and modify the user variable, **envVariables_local**, to fit your test environment.
 
 ### Functional Testing
 The test cases are in **SmokeTest_lite.jmx**.

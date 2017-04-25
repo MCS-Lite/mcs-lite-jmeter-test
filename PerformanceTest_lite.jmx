@@ -13,7 +13,7 @@
     <hashTree>
       <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="jp@gc - Throughput Shaping Timer" enabled="true">
         <collectionProp name="load_profile">
-          <collectionProp name="1819404184">
+          <collectionProp name="1875453375">
             <stringProp name="53">5</stringProp>
             <stringProp name="1691">50</stringProp>
             <stringProp name="1722">60</stringProp>
@@ -23,22 +23,22 @@
             <stringProp name="1691">50</stringProp>
             <stringProp name="48687">120</stringProp>
           </collectionProp>
-          <collectionProp name="548020192">
+          <collectionProp name="-1882502932">
             <stringProp name="48625">100</stringProp>
             <stringProp name="48625">100</stringProp>
-            <stringProp name="1509345">1200</stringProp>
+            <stringProp name="50547">300</stringProp>
           </collectionProp>
-          <collectionProp name="1614013472">
+          <collectionProp name="-816509652">
             <stringProp name="49586">200</stringProp>
-            <stringProp name="49586">200</stringProp>
-            <stringProp name="1509345">1200</stringProp>
-          </collectionProp>
-          <collectionProp name="50758239">
             <stringProp name="49586">200</stringProp>
             <stringProp name="50547">300</stringProp>
-            <stringProp name="1509345">1200</stringProp>
           </collectionProp>
-          <collectionProp name="48607006">
+          <collectionProp name="-90188704">
+            <stringProp name="49586">200</stringProp>
+            <stringProp name="50547">300</stringProp>
+            <stringProp name="48687">120</stringProp>
+          </collectionProp>
+          <collectionProp name="-2112245244">
             <stringProp name="50547">300</stringProp>
             <stringProp name="48">0</stringProp>
             <stringProp name="60">60</stringProp>
@@ -60,7 +60,7 @@
           </elementProp>
           <elementProp name="api_host" elementType="Argument">
             <stringProp name="Argument.name">api_host</stringProp>
-            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.value">192.168.1.87</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="api_port" elementType="Argument">
@@ -70,7 +70,7 @@
           </elementProp>
           <elementProp name="oauth_host" elementType="Argument">
             <stringProp name="Argument.name">oauth_host</stringProp>
-            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.value">192.168.1.87</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="oauth_port" elementType="Argument">
@@ -80,7 +80,7 @@
           </elementProp>
           <elementProp name="ws_host" elementType="Argument">
             <stringProp name="Argument.name">ws_host</stringProp>
-            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.value">192.168.1.87</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="ws_port" elementType="Argument">
@@ -261,32 +261,32 @@
       </ConfigTestElement>
       <hashTree/>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <boolProp name="ResultCollector.error_logging">true</boolProp>
         <objProp>
           <name>saveConfig</name>
           <value class="SampleSaveConfiguration">
-            <time>false</time>
-            <latency>false</latency>
-            <timestamp>false</timestamp>
-            <success>false</success>
-            <label>false</label>
-            <code>false</code>
-            <message>false</message>
-            <threadName>false</threadName>
-            <dataType>false</dataType>
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
             <encoding>false</encoding>
-            <assertions>false</assertions>
-            <subresults>false</subresults>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
             <responseData>false</responseData>
-            <samplerData>true</samplerData>
-            <xml>true</xml>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
             <fieldNames>false</fieldNames>
             <responseHeaders>false</responseHeaders>
-            <requestHeaders>true</requestHeaders>
+            <requestHeaders>false</requestHeaders>
             <responseDataOnError>false</responseDataOnError>
             <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
             <assertionsResultsToSave>0</assertionsResultsToSave>
-            <url>true</url>
+            <bytes>true</bytes>
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
@@ -424,7 +424,7 @@
           </value>
         </objProp>
         <stringProp name="filename"></stringProp>
-        <longProp name="interval_grouping">1000</longProp>
+        <longProp name="interval_grouping">5000</longProp>
         <boolProp name="graph_aggregated">true</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
         <stringProp name="exclude_sample_labels"></stringProp>
@@ -474,29 +474,17 @@
         <boolProp name="include_checkbox_state">false</boolProp>
         <boolProp name="exclude_checkbox_state">false</boolProp>
         <collectionProp name="metricConnections">
-          <collectionProp name="1223612303">
+          <collectionProp name="1223587254">
             <stringProp name="1247583865">${api_host}</stringProp>
             <stringProp name="1600768">4444</stringProp>
             <stringProp name="66952">CPU</stringProp>
             <stringProp name="0"></stringProp>
           </collectionProp>
-          <collectionProp name="-1077102018">
+          <collectionProp name="-1077127067">
             <stringProp reference="../../collectionProp/stringProp"/>
             <stringProp reference="../../collectionProp/stringProp[2]"/>
             <stringProp name="-1993889503">Memory</stringProp>
             <stringProp name="0"></stringProp>
-          </collectionProp>
-          <collectionProp name="811907233">
-            <stringProp reference="../../collectionProp/stringProp"/>
-            <stringProp reference="../../collectionProp/stringProp[2]"/>
-            <stringProp name="2112896831">Disks I/O</stringProp>
-            <stringProp name="0"></stringProp>
-          </collectionProp>
-          <collectionProp name="-964762002">
-            <stringProp reference="../../collectionProp/stringProp"/>
-            <stringProp reference="../../collectionProp/stringProp[2]"/>
-            <stringProp name="-274342153">Network I/O</stringProp>
-            <stringProp reference="../../collectionProp[3]/stringProp[4]"/>
           </collectionProp>
         </collectionProp>
       </kg.apc.jmeter.perfmon.PerfMonCollector>

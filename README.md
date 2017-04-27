@@ -6,8 +6,8 @@ Use JMeter script to do API functional testing and server load/stability testing
 2. To install the following JMeter plugins
 	
 	* [Throughput Shaping Timer](https://jmeter-plugins.org/wiki/ThroughputShapingTimer/)  	
-	* [Transactions per Second](https://jmeter-plugins.org/wiki/TransactionsPerSecond/)
-	* [Servers Performance Monitoring](https://jmeter-plugins.org/wiki/PerfMon/)
+	* [Transactions per Second (3 Basic Graphs)](https://jmeter-plugins.org/wiki/TransactionsPerSecond/)
+	* [PerfMon (Servers Performance Monitoring)](https://jmeter-plugins.org/wiki/PerfMon/)
 	* [WebSocket Sampler by Maciej Zaleski](https://github.com/maciejzaleski/JMeter-WebSocketSampler/wiki)
 	
 	All the plugins can all be managed by [Jmeter Plugins Manager](https://jmeter-plugins.org/wiki/PluginsManager/).

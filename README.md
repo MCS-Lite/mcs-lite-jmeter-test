@@ -15,11 +15,13 @@ Use JMeter script to do API functional testing and server load/stability testing
 3. To extend JMeter library support for JSON by adding 3 *.jar files from [minimal-json](https://github.com/ralfstx/minimal-json/releases) to ${JMeterRoot}/lib/ext folder.
 
 ## Get Started
-1. Launch ApacheJMeter.jar
-2. Open SmokeTest_lite.jmx and execute this script in JMeter.
+Launch ApacheJMeter.jar, which is under ${JMeterRoot}/bin folder.
+
 
 ### Functional Testing
-You can see the test result in **View Results Tress**
+The test cases are in **SmokeTest_lite.jmx**.
+You can see the test result in **View Results Tress**.
 
 ### Load/Capacity Testing
-Please enable **Throughput Shaping Timer**, **Transaction per Second** and **PerfMon Metric Collector**
+The test cases are in **PerformanceTest_lite.jmx**.
+You can see the test result in **Transaction per Second** and **PerfMon Metric Collector**.

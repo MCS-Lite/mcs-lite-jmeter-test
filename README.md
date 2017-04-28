@@ -25,3 +25,11 @@ You can see the test result in **View Results Tress**.
 ### Load/Capacity Testing
 The test cases are in **PerformanceTest_lite.jmx**.
 You can see the test result in **Transaction per Second** and **PerfMon Metric Collector**.
+
+Suggest to execute this performance test script in non-GUI mode with command 
+
+```
+ ${JMeterRoot}/bin/jmeter -n -t PerformanceTest_lite.jmx -l LogFile.jtl
+```
+
+Here are some userful pratices while doing performance testing via JMeter: [9 Easy Solutions for a JMeter Load Test “Out of Memory” Failure](https://www.blazemeter.com/blog/9-easy-solutions-jmeter-load-test-%E2%80%9Cout-memory%E2%80%9D-failure)

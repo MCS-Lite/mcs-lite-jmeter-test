@@ -18,30 +18,20 @@
             <stringProp name="1691">50</stringProp>
             <stringProp name="1722">60</stringProp>
           </collectionProp>
-          <collectionProp name="1581225068">
+          <collectionProp name="-257841822">
             <stringProp name="1691">50</stringProp>
             <stringProp name="1691">50</stringProp>
-            <stringProp name="48687">120</stringProp>
+            <stringProp name="1572771">3600</stringProp>
           </collectionProp>
-          <collectionProp name="-1882502932">
-            <stringProp name="48625">100</stringProp>
-            <stringProp name="48625">100</stringProp>
-            <stringProp name="50547">300</stringProp>
-          </collectionProp>
-          <collectionProp name="-816509652">
-            <stringProp name="49586">200</stringProp>
-            <stringProp name="49586">200</stringProp>
-            <stringProp name="50547">300</stringProp>
-          </collectionProp>
-          <collectionProp name="-90188704">
-            <stringProp name="49586">200</stringProp>
-            <stringProp name="50547">300</stringProp>
-            <stringProp name="48687">120</stringProp>
-          </collectionProp>
-          <collectionProp name="-2112245244">
-            <stringProp name="50547">300</stringProp>
+          <collectionProp name="-127547756">
+            <stringProp name="1691">50</stringProp>
             <stringProp name="48">0</stringProp>
-            <stringProp name="60">60</stringProp>
+            <stringProp name="50547">300</stringProp>
+          </collectionProp>
+          <collectionProp name="84435182">
+            <stringProp name="48">0</stringProp>
+            <stringProp name="48">0</stringProp>
+            <stringProp name="48687">120</stringProp>
           </collectionProp>
         </collectionProp>
       </kg.apc.jmeter.timers.VariableThroughputTimer>
@@ -60,7 +50,7 @@
           </elementProp>
           <elementProp name="api_host" elementType="Argument">
             <stringProp name="Argument.name">api_host</stringProp>
-            <stringProp name="Argument.value">192.168.1.87</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="api_port" elementType="Argument">
@@ -70,7 +60,7 @@
           </elementProp>
           <elementProp name="oauth_host" elementType="Argument">
             <stringProp name="Argument.name">oauth_host</stringProp>
-            <stringProp name="Argument.value">192.168.1.87</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="oauth_port" elementType="Argument">
@@ -80,7 +70,7 @@
           </elementProp>
           <elementProp name="ws_host" elementType="Argument">
             <stringProp name="Argument.name">ws_host</stringProp>
-            <stringProp name="Argument.value">192.168.1.87</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="ws_port" elementType="Argument">
@@ -260,40 +250,7 @@
         <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
       </ConfigTestElement>
       <hashTree/>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-        <boolProp name="ResultCollector.error_logging">true</boolProp>
-        <objProp>
-          <name>saveConfig</name>
-          <value class="SampleSaveConfiguration">
-            <time>true</time>
-            <latency>true</latency>
-            <timestamp>true</timestamp>
-            <success>true</success>
-            <label>true</label>
-            <code>true</code>
-            <message>true</message>
-            <threadName>true</threadName>
-            <dataType>true</dataType>
-            <encoding>false</encoding>
-            <assertions>true</assertions>
-            <subresults>true</subresults>
-            <responseData>false</responseData>
-            <samplerData>false</samplerData>
-            <xml>false</xml>
-            <fieldNames>false</fieldNames>
-            <responseHeaders>false</responseHeaders>
-            <requestHeaders>false</requestHeaders>
-            <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
-            <assertionsResultsToSave>0</assertionsResultsToSave>
-            <bytes>true</bytes>
-            <threadCounts>true</threadCounts>
-          </value>
-        </objProp>
-        <stringProp name="filename"></stringProp>
-      </ResultCollector>
-      <hashTree/>
-      <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -320,13 +277,14 @@
             <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
             <assertionsResultsToSave>0</assertionsResultsToSave>
             <bytes>true</bytes>
+            <url>true</url>
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Graph" enabled="true">
+      <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -353,13 +311,14 @@
             <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
             <assertionsResultsToSave>0</assertionsResultsToSave>
             <bytes>true</bytes>
+            <url>true</url>
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph" enabled="true">
+      <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Graph" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -386,6 +345,41 @@
             <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
             <assertionsResultsToSave>0</assertionsResultsToSave>
             <bytes>true</bytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <url>true</url>
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
@@ -393,7 +387,7 @@
         <boolProp name="RespTimeGraph.yaxisnumbergrouping">false</boolProp>
       </ResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="true">
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -420,6 +414,7 @@
             <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
             <assertionsResultsToSave>0</assertionsResultsToSave>
             <bytes>true</bytes>
+            <url>true</url>
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
@@ -461,10 +456,11 @@
             <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
             <assertionsResultsToSave>0</assertionsResultsToSave>
             <bytes>true</bytes>
+            <url>true</url>
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
-        <stringProp name="filename"></stringProp>
+        <stringProp name="filename">/resourceUsage.jtl</stringProp>
         <longProp name="interval_grouping">1000</longProp>
         <boolProp name="graph_aggregated">false</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -474,23 +470,23 @@
         <boolProp name="include_checkbox_state">false</boolProp>
         <boolProp name="exclude_checkbox_state">false</boolProp>
         <collectionProp name="metricConnections">
-          <collectionProp name="1223587254">
+          <collectionProp name="1632199000">
             <stringProp name="1247583865">${api_host}</stringProp>
             <stringProp name="1600768">4444</stringProp>
             <stringProp name="66952">CPU</stringProp>
-            <stringProp name="0"></stringProp>
+            <stringProp name="-1910715799">pid=12749</stringProp>
           </collectionProp>
-          <collectionProp name="-1077127067">
+          <collectionProp name="-668515321">
             <stringProp reference="../../collectionProp/stringProp"/>
             <stringProp reference="../../collectionProp/stringProp[2]"/>
             <stringProp name="-1993889503">Memory</stringProp>
-            <stringProp name="0"></stringProp>
+            <stringProp name="-1910715799">pid=12749</stringProp>
           </collectionProp>
         </collectionProp>
       </kg.apc.jmeter.perfmon.PerfMonCollector>
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Create Account" enabled="true">
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">stopthread</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
@@ -554,7 +550,7 @@
         <hashTree/>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Get Token" enabled="true">
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">stopthread</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
@@ -702,18 +698,19 @@ log.info(&quot;The user token is: &quot; + userToken);
         </hashTree>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="MCS Lite Web Operation" enabled="true">
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">600</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="ThreadGroup.ramp_time"></stringProp>
         <longProp name="ThreadGroup.start_time">1487050081000</longProp>
         <longProp name="ThreadGroup.end_time">1487050081000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
       </ThreadGroup>
       <hashTree>
         <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
@@ -772,7 +769,7 @@ log.info(&quot;The user token is: &quot; + userToken);
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49586">200</stringProp>
               </collectionProp>
@@ -815,7 +812,7 @@ for(int i=0; i &lt; resultJson.size(); i++){
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;prototypeName&quot;:&quot;prototype ${__property(ownerNickName)} ${__time(YMMdd_hh:mm:ss)}&quot;,&quot;prototypeDescription&quot;:&quot;prototype is created by ${__property(ownerNickName)} on ${__time(YMMdd_hh:mm:ss)}&quot;,&quot;prototypeImageURL&quot;:&quot;&quot;, &quot;version&quot;:&quot;0.1&quot;}</stringProp>
+                  <stringProp name="Argument.value">{&quot;prototypeName&quot;:&quot;performanceTest&quot;,&quot;prototypeDescription&quot;:&quot;performanceTest&quot;,&quot;prototypeImageURL&quot;:&quot;&quot;, &quot;version&quot;:&quot;0.1&quot;}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -836,7 +833,7 @@ for(int i=0; i &lt; resultJson.size(); i++){
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49586">200</stringProp>
               </collectionProp>
@@ -893,7 +890,7 @@ log.info(&quot;The new created prototype is with: prodID=&quot; + prodID + &quot
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49586">200</stringProp>
               </collectionProp>
@@ -923,7 +920,7 @@ vars.put(&quot;viewProdName&quot;, prodName);
 log.info(&quot;The current viewed prototype is with: prodID=&quot; + prodID + &quot;, prodKey=&quot; + prodKey);</stringProp>
             </BeanShellPostProcessor>
             <hashTree/>
-            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="false">
               <stringProp name="BeanShellAssertion.query">Failure = true;
 String addProdID = vars.get(&quot;prodID&quot;);
 String viewProdID = vars.get(&quot;viewProdID&quot;);
@@ -949,7 +946,7 @@ if(addProdID.equals(viewProdID)){
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;prototypeName&quot;:&quot;updated prototype ${__property(ownerNickName)} ${__time(YMMdd_hh:mm:ss)}&quot;,&quot;prototypeDescription&quot;:&quot;prototype is updated by ${__property(ownerNickName)} on ${__time(YMMdd_hh:mm:ss)}&quot;,&quot;prototypeImageURL&quot;:&quot;&quot;, &quot;version&quot;:&quot;0.1&quot;}</stringProp>
+                  <stringProp name="Argument.value">{&quot;prototypeName&quot;:&quot;performanceTest2&quot;,&quot;prototypeDescription&quot;:&quot;performanceTest2&quot;,&quot;prototypeImageURL&quot;:&quot;&quot;, &quot;version&quot;:&quot;0.1&quot;}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -970,7 +967,7 @@ if(addProdID.equals(viewProdID)){
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49586">200</stringProp>
               </collectionProp>
@@ -979,7 +976,7 @@ if(addProdID.equals(viewProdID)){
               <intProp name="Assertion.test_type">2</intProp>
             </ResponseAssertion>
             <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-225745036">{&quot;message&quot;:&quot;success&quot;}</stringProp>
               </collectionProp>
@@ -1016,7 +1013,7 @@ if(addProdID.equals(viewProdID)){
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49586">200</stringProp>
               </collectionProp>
@@ -1025,7 +1022,7 @@ if(addProdID.equals(viewProdID)){
               <intProp name="Assertion.test_type">2</intProp>
             </ResponseAssertion>
             <hashTree/>
-            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="false">
               <boolProp name="resetInterpreter">false</boolProp>
               <stringProp name="parameters"></stringProp>
               <stringProp name="filename"></stringProp>
@@ -1041,7 +1038,7 @@ vars.put(&quot;updatedPrototypeName&quot;, prodName);
 log.info(&quot;The new updated prototype is with: name= &quot; + prodName);</stringProp>
             </BeanShellPostProcessor>
             <hashTree/>
-            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="false">
               <stringProp name="BeanShellAssertion.query">Failure = true;
 String prodName = vars.get(&quot;updatedPrototypeName&quot;);
 
@@ -1060,45 +1057,6 @@ if(prodName.contains(&quot;updated&quot;)){
               <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
             </BeanShellAssertion>
             <hashTree/>
-          </hashTree>
-          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Delete" enabled="false">
-            <stringProp name="ForeachController.inputVal">prodID</stringProp>
-            <stringProp name="ForeachController.returnVal">index</stringProp>
-            <boolProp name="ForeachController.useSeparator">true</boolProp>
-            <stringProp name="ForeachController.startIndex">-1</stringProp>
-            <stringProp name="ForeachController.endIndex">${prodCount}</stringProp>
-          </ForeachController>
-          <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete Prototype" enabled="true">
-              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-                <collectionProp name="Arguments.arguments"/>
-              </elementProp>
-              <stringProp name="HTTPSampler.domain"></stringProp>
-              <stringProp name="HTTPSampler.port"></stringProp>
-              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-              <stringProp name="HTTPSampler.response_timeout"></stringProp>
-              <stringProp name="HTTPSampler.protocol"></stringProp>
-              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-              <stringProp name="HTTPSampler.path">/api/prototypes/${index}</stringProp>
-              <stringProp name="HTTPSampler.method">DELETE</stringProp>
-              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-              <boolProp name="HTTPSampler.monitor">false</boolProp>
-              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            </HTTPSamplerProxy>
-            <hashTree>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-                <collectionProp name="Asserion.test_strings">
-                  <stringProp name="49586">200</stringProp>
-                </collectionProp>
-                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-                <boolProp name="Assertion.assume_success">false</boolProp>
-                <intProp name="Assertion.test_type">2</intProp>
-              </ResponseAssertion>
-              <hashTree/>
-            </hashTree>
           </hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="View Prototype List" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -1127,7 +1085,7 @@ if(prodName.contains(&quot;updated&quot;)){
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49586">200</stringProp>
               </collectionProp>
@@ -1167,7 +1125,7 @@ for(int i=0; i &lt; resultJson.size(); i++){
         <hashTree>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Add Data Channels" enabled="true"/>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Control_Boolean" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1217,7 +1175,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Control_Category" enabled="false">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="false">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1264,7 +1222,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Control_Integer" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1311,7 +1269,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Control_Float" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1357,7 +1315,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Control_Hex" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1403,7 +1361,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Control_String" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1449,7 +1407,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Control_GPIO" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1495,7 +1453,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Control_PWM" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1541,7 +1499,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Control_Analog" enabled="false">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="false">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1587,7 +1545,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Display_Boolean" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1633,7 +1591,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Display_Category" enabled="false">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="false">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1679,7 +1637,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Display_Integer" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1725,7 +1683,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Display_Float" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1771,7 +1729,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Display_Hex" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1817,7 +1775,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Display_String" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1863,7 +1821,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Display_GPIO" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1909,7 +1867,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Display_PWM" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Data Channel" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1983,7 +1941,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="681868476">&quot;datachannelId&quot;:&quot;${control_boolean}&quot;</stringProp>
                 <stringProp name="-884104110">&quot;datachannelId&quot;:&quot;${control_integer}&quot;</stringProp>
@@ -2036,7 +1994,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49586">200</stringProp>
               </collectionProp>
@@ -2095,7 +2053,7 @@ printWriter.close();
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;deviceName&quot;:&quot;TestDevice ${__time(YMMdd hh:mm:ss)}&quot;,&quot;deviceDescription&quot;:&quot;device is created by ${__property(ownerNickName)} on ${__time(YMMdd_hh:mm:ss)}&quot;,&quot;deviceImageURL&quot;:&quot;&quot;,&quot;prototypeId&quot;:&quot;${prodID}&quot;,&quot;createUserId&quot;:&quot;${__property(ownerId)}&quot;}</stringProp>
+                  <stringProp name="Argument.value">{&quot;deviceName&quot;:&quot;performanceTest&quot;,&quot;deviceDescription&quot;:&quot;performanceTest&quot;,&quot;deviceImageURL&quot;:&quot;&quot;,&quot;prototypeId&quot;:&quot;${prodID}&quot;,&quot;createUserId&quot;:&quot;${__property(ownerId)}&quot;}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -2116,7 +2074,7 @@ printWriter.close();
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49586">200</stringProp>
               </collectionProp>
@@ -2170,7 +2128,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49586">200</stringProp>
               </collectionProp>
@@ -2179,7 +2137,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <intProp name="Assertion.test_type">2</intProp>
             </ResponseAssertion>
             <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="541628484">&quot;deviceId&quot;:&quot;${deviceID}&quot;</stringProp>
                 <stringProp name="252490164">&quot;deviceKey&quot;:&quot;${deviceKey}&quot;</stringProp>
@@ -2190,45 +2148,6 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Delete" enabled="false">
-            <stringProp name="ForeachController.inputVal">deviceID</stringProp>
-            <stringProp name="ForeachController.returnVal">index</stringProp>
-            <boolProp name="ForeachController.useSeparator">true</boolProp>
-            <stringProp name="ForeachController.startIndex">-1</stringProp>
-            <stringProp name="ForeachController.endIndex">${deviceCount}</stringProp>
-          </ForeachController>
-          <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete Devices" enabled="true">
-              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-                <collectionProp name="Arguments.arguments"/>
-              </elementProp>
-              <stringProp name="HTTPSampler.domain"></stringProp>
-              <stringProp name="HTTPSampler.port"></stringProp>
-              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-              <stringProp name="HTTPSampler.response_timeout"></stringProp>
-              <stringProp name="HTTPSampler.protocol"></stringProp>
-              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-              <stringProp name="HTTPSampler.path">/api/devices/${index}</stringProp>
-              <stringProp name="HTTPSampler.method">DELETE</stringProp>
-              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-              <boolProp name="HTTPSampler.monitor">false</boolProp>
-              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            </HTTPSamplerProxy>
-            <hashTree>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-                <collectionProp name="Asserion.test_strings">
-                  <stringProp name="49586">200</stringProp>
-                </collectionProp>
-                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-                <boolProp name="Assertion.assume_success">false</boolProp>
-                <intProp name="Assertion.test_type">2</intProp>
-              </ResponseAssertion>
-              <hashTree/>
-            </hashTree>
-          </hashTree>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Data Point" enabled="true"/>
         <hashTree>
@@ -2237,7 +2156,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
             <stringProp name="LoopController.loops">1</stringProp>
           </LoopController>
           <hashTree>
-            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data (display_boolean)" enabled="true">
+            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data" enabled="true">
               <stringProp name="serverAddress">${ws_host}</stringProp>
               <stringProp name="serverPort">8000</stringProp>
               <stringProp name="implementation">RFC6455 (v13)</stringProp>
@@ -2246,7 +2165,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="contentEncoding">UTF-8</stringProp>
               <stringProp name="requestPayload">{&quot;datachannelId&quot;:&quot;${display_boolean}&quot;,&quot;values&quot;:{&quot;value&quot;:${__Random(0, 1)}}}</stringProp>
               <stringProp name="connectionTimeout">5000</stringProp>
-              <stringProp name="responseTimeout">1000</stringProp>
+              <stringProp name="responseTimeout">500</stringProp>
               <boolProp name="ignoreSslErrors">true</boolProp>
               <boolProp name="streamingConnection">true</boolProp>
               <stringProp name="connectionId"></stringProp>
@@ -2262,7 +2181,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               </elementProp>
             </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
             <hashTree/>
-            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data (display_integer)" enabled="true">
+            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data" enabled="true">
               <stringProp name="serverAddress">${ws_host}</stringProp>
               <stringProp name="serverPort">8000</stringProp>
               <stringProp name="implementation">RFC6455 (v13)</stringProp>
@@ -2271,7 +2190,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="contentEncoding">UTF-8</stringProp>
               <stringProp name="requestPayload">{&quot;datachannelId&quot;:&quot;${display_integer}&quot;,&quot;values&quot;:{&quot;value&quot;:${__Random(0, 100)}}}</stringProp>
               <stringProp name="connectionTimeout">5000</stringProp>
-              <stringProp name="responseTimeout">1000</stringProp>
+              <stringProp name="responseTimeout">500</stringProp>
               <boolProp name="ignoreSslErrors">true</boolProp>
               <boolProp name="streamingConnection">true</boolProp>
               <stringProp name="connectionId"></stringProp>
@@ -2287,7 +2206,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               </elementProp>
             </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
             <hashTree/>
-            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data (display_float)" enabled="true">
+            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data" enabled="true">
               <stringProp name="serverAddress">${ws_host}</stringProp>
               <stringProp name="serverPort">8000</stringProp>
               <stringProp name="implementation">RFC6455 (v13)</stringProp>
@@ -2296,7 +2215,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="contentEncoding">UTF-8</stringProp>
               <stringProp name="requestPayload">{&quot;datachannelId&quot;:&quot;${display_float}&quot;,&quot;values&quot;:{&quot;value&quot;:${__Random(1, 999999)}.${__Random(1, 999999)}}}</stringProp>
               <stringProp name="connectionTimeout">5000</stringProp>
-              <stringProp name="responseTimeout">1000</stringProp>
+              <stringProp name="responseTimeout">500</stringProp>
               <boolProp name="ignoreSslErrors">true</boolProp>
               <boolProp name="streamingConnection">true</boolProp>
               <stringProp name="connectionId"></stringProp>
@@ -2312,7 +2231,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               </elementProp>
             </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
             <hashTree/>
-            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data (display_hex)" enabled="true">
+            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data" enabled="true">
               <stringProp name="serverAddress">${ws_host}</stringProp>
               <stringProp name="serverPort">8000</stringProp>
               <stringProp name="implementation">RFC6455 (v13)</stringProp>
@@ -2321,7 +2240,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="contentEncoding">UTF-8</stringProp>
               <stringProp name="requestPayload">{&quot;datachannelId&quot;:&quot;${display_hex}&quot;,&quot;values&quot;:{&quot;value&quot;:&quot;${__RandomString(30,ABCDEF0123456789)}&quot;}}</stringProp>
               <stringProp name="connectionTimeout">5000</stringProp>
-              <stringProp name="responseTimeout">1000</stringProp>
+              <stringProp name="responseTimeout">500</stringProp>
               <boolProp name="ignoreSslErrors">true</boolProp>
               <boolProp name="streamingConnection">true</boolProp>
               <stringProp name="connectionId"></stringProp>
@@ -2337,7 +2256,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               </elementProp>
             </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
             <hashTree/>
-            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data (display_string)" enabled="true">
+            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data" enabled="true">
               <stringProp name="serverAddress">${ws_host}</stringProp>
               <stringProp name="serverPort">8000</stringProp>
               <stringProp name="implementation">RFC6455 (v13)</stringProp>
@@ -2346,7 +2265,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="contentEncoding">UTF-8</stringProp>
               <stringProp name="requestPayload">{&quot;datachannelId&quot;:&quot;${display_string}&quot;,&quot;values&quot;:{&quot;value&quot;:&quot;${__RandomString(10,ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789)}&quot;}}</stringProp>
               <stringProp name="connectionTimeout">5000</stringProp>
-              <stringProp name="responseTimeout">1000</stringProp>
+              <stringProp name="responseTimeout">500</stringProp>
               <boolProp name="ignoreSslErrors">true</boolProp>
               <boolProp name="streamingConnection">true</boolProp>
               <stringProp name="connectionId"></stringProp>
@@ -2362,7 +2281,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               </elementProp>
             </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
             <hashTree/>
-            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data (display_GPIO)" enabled="true">
+            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data" enabled="true">
               <stringProp name="serverAddress">${ws_host}</stringProp>
               <stringProp name="serverPort">8000</stringProp>
               <stringProp name="implementation">RFC6455 (v13)</stringProp>
@@ -2371,7 +2290,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="contentEncoding">UTF-8</stringProp>
               <stringProp name="requestPayload">{&quot;datachannelId&quot;:&quot;${display_gpio}&quot;,&quot;values&quot;:{&quot;value&quot;:1}}</stringProp>
               <stringProp name="connectionTimeout">5000</stringProp>
-              <stringProp name="responseTimeout">1000</stringProp>
+              <stringProp name="responseTimeout">500</stringProp>
               <boolProp name="ignoreSslErrors">true</boolProp>
               <boolProp name="streamingConnection">true</boolProp>
               <stringProp name="connectionId"></stringProp>
@@ -2387,7 +2306,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               </elementProp>
             </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
             <hashTree/>
-            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data (display_PWM)" enabled="true">
+            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data" enabled="true">
               <stringProp name="serverAddress">${ws_host}</stringProp>
               <stringProp name="serverPort">8000</stringProp>
               <stringProp name="implementation">RFC6455 (v13)</stringProp>
@@ -2396,7 +2315,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="contentEncoding">UTF-8</stringProp>
               <stringProp name="requestPayload">{&quot;datachannelId&quot;:&quot;${display_pwm}&quot;,&quot;values&quot;:{&quot;value&quot;:${__Random(1, 100)},&quot;period&quot;:${__Random(1, 100)}}}</stringProp>
               <stringProp name="connectionTimeout">5000</stringProp>
-              <stringProp name="responseTimeout">1000</stringProp>
+              <stringProp name="responseTimeout">500</stringProp>
               <boolProp name="ignoreSslErrors">true</boolProp>
               <boolProp name="streamingConnection">true</boolProp>
               <stringProp name="connectionId"></stringProp>
@@ -2412,7 +2331,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               </elementProp>
             </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
             <hashTree/>
-            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data (control_boolean)" enabled="true">
+            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data" enabled="true">
               <stringProp name="serverAddress">${ws_host}</stringProp>
               <stringProp name="serverPort">8000</stringProp>
               <stringProp name="implementation">RFC6455 (v13)</stringProp>
@@ -2421,7 +2340,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="contentEncoding">UTF-8</stringProp>
               <stringProp name="requestPayload">{&quot;datachannelId&quot;:&quot;${control_boolean}&quot;,&quot;values&quot;:{&quot;value&quot;:${__Random(0, 1)}}}</stringProp>
               <stringProp name="connectionTimeout">5000</stringProp>
-              <stringProp name="responseTimeout">1000</stringProp>
+              <stringProp name="responseTimeout">500</stringProp>
               <boolProp name="ignoreSslErrors">true</boolProp>
               <boolProp name="streamingConnection">true</boolProp>
               <stringProp name="connectionId"></stringProp>
@@ -2437,7 +2356,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               </elementProp>
             </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
             <hashTree/>
-            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data (control_integer)" enabled="true">
+            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data" enabled="true">
               <stringProp name="serverAddress">${ws_host}</stringProp>
               <stringProp name="serverPort">8000</stringProp>
               <stringProp name="implementation">RFC6455 (v13)</stringProp>
@@ -2446,7 +2365,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="contentEncoding">UTF-8</stringProp>
               <stringProp name="requestPayload">{&quot;datachannelId&quot;:&quot;${control_integer}&quot;,&quot;values&quot;:{&quot;value&quot;:${__Random(0, 100)}}}</stringProp>
               <stringProp name="connectionTimeout">5000</stringProp>
-              <stringProp name="responseTimeout">1000</stringProp>
+              <stringProp name="responseTimeout">500</stringProp>
               <boolProp name="ignoreSslErrors">true</boolProp>
               <boolProp name="streamingConnection">true</boolProp>
               <stringProp name="connectionId"></stringProp>
@@ -2462,7 +2381,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               </elementProp>
             </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
             <hashTree/>
-            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data (control_float)" enabled="true">
+            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data" enabled="true">
               <stringProp name="serverAddress">${ws_host}</stringProp>
               <stringProp name="serverPort">8000</stringProp>
               <stringProp name="implementation">RFC6455 (v13)</stringProp>
@@ -2471,7 +2390,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="contentEncoding">UTF-8</stringProp>
               <stringProp name="requestPayload">{&quot;datachannelId&quot;:&quot;${control_float}&quot;,&quot;values&quot;:{&quot;value&quot;:${__Random(1, 999999)}.${__Random(1, 999999)}}}</stringProp>
               <stringProp name="connectionTimeout">5000</stringProp>
-              <stringProp name="responseTimeout">1000</stringProp>
+              <stringProp name="responseTimeout">500</stringProp>
               <boolProp name="ignoreSslErrors">true</boolProp>
               <boolProp name="streamingConnection">true</boolProp>
               <stringProp name="connectionId"></stringProp>
@@ -2487,7 +2406,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               </elementProp>
             </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
             <hashTree/>
-            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data (control_hex)" enabled="true">
+            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data" enabled="true">
               <stringProp name="serverAddress">${ws_host}</stringProp>
               <stringProp name="serverPort">8000</stringProp>
               <stringProp name="implementation">RFC6455 (v13)</stringProp>
@@ -2496,7 +2415,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="contentEncoding">UTF-8</stringProp>
               <stringProp name="requestPayload">{&quot;datachannelId&quot;:&quot;${control_hex}&quot;,&quot;values&quot;:{&quot;value&quot;:&quot;${__RandomString(30,ABCDEF0123456789)}&quot;}}</stringProp>
               <stringProp name="connectionTimeout">5000</stringProp>
-              <stringProp name="responseTimeout">1000</stringProp>
+              <stringProp name="responseTimeout">500</stringProp>
               <boolProp name="ignoreSslErrors">true</boolProp>
               <boolProp name="streamingConnection">true</boolProp>
               <stringProp name="connectionId"></stringProp>
@@ -2512,7 +2431,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               </elementProp>
             </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
             <hashTree/>
-            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data (control_string)" enabled="true">
+            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data" enabled="true">
               <stringProp name="serverAddress">${ws_host}</stringProp>
               <stringProp name="serverPort">8000</stringProp>
               <stringProp name="implementation">RFC6455 (v13)</stringProp>
@@ -2521,7 +2440,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="contentEncoding">UTF-8</stringProp>
               <stringProp name="requestPayload">{&quot;datachannelId&quot;:&quot;${control_string}&quot;,&quot;values&quot;:{&quot;value&quot;:&quot;${__RandomString(10,ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789)}&quot;}}</stringProp>
               <stringProp name="connectionTimeout">5000</stringProp>
-              <stringProp name="responseTimeout">1000</stringProp>
+              <stringProp name="responseTimeout">500</stringProp>
               <boolProp name="ignoreSslErrors">true</boolProp>
               <boolProp name="streamingConnection">true</boolProp>
               <stringProp name="connectionId"></stringProp>
@@ -2537,7 +2456,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               </elementProp>
             </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
             <hashTree/>
-            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data (control_GPIO)" enabled="true">
+            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data" enabled="true">
               <stringProp name="serverAddress">${ws_host}</stringProp>
               <stringProp name="serverPort">8000</stringProp>
               <stringProp name="implementation">RFC6455 (v13)</stringProp>
@@ -2546,7 +2465,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="contentEncoding">UTF-8</stringProp>
               <stringProp name="requestPayload">{&quot;datachannelId&quot;:&quot;${control_gpio}&quot;,&quot;values&quot;:{&quot;value&quot;:1}}</stringProp>
               <stringProp name="connectionTimeout">5000</stringProp>
-              <stringProp name="responseTimeout">1000</stringProp>
+              <stringProp name="responseTimeout">500</stringProp>
               <boolProp name="ignoreSslErrors">true</boolProp>
               <boolProp name="streamingConnection">true</boolProp>
               <stringProp name="connectionId"></stringProp>
@@ -2562,7 +2481,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               </elementProp>
             </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
             <hashTree/>
-            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data (control_PWM)" enabled="true">
+            <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WS_Upload Data" enabled="true">
               <stringProp name="serverAddress">${ws_host}</stringProp>
               <stringProp name="serverPort">8000</stringProp>
               <stringProp name="implementation">RFC6455 (v13)</stringProp>
@@ -2571,7 +2490,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="contentEncoding">UTF-8</stringProp>
               <stringProp name="requestPayload">{&quot;datachannelId&quot;:&quot;${control_pwm}&quot;,&quot;values&quot;:{&quot;value&quot;:${__Random(1, 100)},&quot;period&quot;:${__Random(1, 100)}}}</stringProp>
               <stringProp name="connectionTimeout">5000</stringProp>
-              <stringProp name="responseTimeout">1000</stringProp>
+              <stringProp name="responseTimeout">500</stringProp>
               <boolProp name="ignoreSslErrors">true</boolProp>
               <boolProp name="streamingConnection">true</boolProp>
               <stringProp name="connectionId"></stringProp>
@@ -2808,13 +2727,13 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CSV_Upload Data (display_boolean)" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CSV_Upload Data" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                    <stringProp name="Argument.value">${display_boolean},,${__Random(0, 1)}</stringProp>
+                    <stringProp name="Argument.value">${display_boolean},,1</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                   </elementProp>
                 </collectionProp>
@@ -2835,13 +2754,13 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             </HTTPSamplerProxy>
             <hashTree/>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CSV_Upload Integer (display_integer)" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CSV_Upload Data" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                    <stringProp name="Argument.value">${display_integer},,${__Random(0, 100)}</stringProp>
+                    <stringProp name="Argument.value">${display_integer},,99</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                   </elementProp>
                 </collectionProp>
@@ -2862,13 +2781,13 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             </HTTPSamplerProxy>
             <hashTree/>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CSV_Upload Data (display_float)" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CSV_Upload Data" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                    <stringProp name="Argument.value">${display_float},,${__Random(1, 999999)}.${__Random(1, 999999)}</stringProp>
+                    <stringProp name="Argument.value">${display_float},,99.99</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                   </elementProp>
                 </collectionProp>
@@ -2889,13 +2808,13 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             </HTTPSamplerProxy>
             <hashTree/>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CSV_Upload Data (display_hex)" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CSV_Upload Data" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                    <stringProp name="Argument.value">${display_hex},,${__RandomString(30,ABCDEF0123456789)}</stringProp>
+                    <stringProp name="Argument.value">${display_hex},,AABB123</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                   </elementProp>
                 </collectionProp>
@@ -2916,13 +2835,13 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             </HTTPSamplerProxy>
             <hashTree/>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CSV_Upload Data (display_string)" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CSV_Upload Data" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                    <stringProp name="Argument.value">${display_string},,${__RandomString(30,ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789)}</stringProp>
+                    <stringProp name="Argument.value">${display_string},,performanceTest</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                   </elementProp>
                 </collectionProp>
@@ -2943,7 +2862,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             </HTTPSamplerProxy>
             <hashTree/>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CSV_Upload Data (display_GPIO)" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CSV_Upload Data" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -2970,7 +2889,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             </HTTPSamplerProxy>
             <hashTree/>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CSV_Upload Data (display_PWM)" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CSV_Upload Data" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -2998,7 +2917,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
             </HTTPSamplerProxy>
             <hashTree/>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="RESTful Retrieve (JSON)" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="RESTful Retrieve (JSON)" enabled="false"/>
           <hashTree>
             <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
               <collectionProp name="HeaderManager.headers">
@@ -3431,7 +3350,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49586">200</stringProp>
               </collectionProp>
@@ -3441,6 +3360,66 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete Devices" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/api/devices/${deviceID}</stringProp>
+          <stringProp name="HTTPSampler.method">DELETE</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete Prototype" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/api/prototypes/${viewProdID}</stringProp>
+          <stringProp name="HTTPSampler.method">DELETE</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
     </hashTree>

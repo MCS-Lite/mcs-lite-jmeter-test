@@ -13,25 +13,20 @@
     <hashTree>
       <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="jp@gc - Throughput Shaping Timer" enabled="true">
         <collectionProp name="load_profile">
-          <collectionProp name="-1113228620">
-            <stringProp name="53">5</stringProp>
-            <stringProp name="49586">200</stringProp>
-            <stringProp name="48873">180</stringProp>
+          <collectionProp name="140463851">
+            <stringProp name="48">0</stringProp>
+            <stringProp name="50">2</stringProp>
+            <stringProp name="1722">60</stringProp>
           </collectionProp>
-          <collectionProp name="1122847532">
-            <stringProp name="49586">200</stringProp>
-            <stringProp name="49586">200</stringProp>
-            <stringProp name="48755949">36000</stringProp>
+          <collectionProp name="1861886930">
+            <stringProp name="50">2</stringProp>
+            <stringProp name="50">2</stringProp>
+            <stringProp name="1688091">7200</stringProp>
           </collectionProp>
-          <collectionProp name="-2097436754">
-            <stringProp name="49586">200</stringProp>
-            <stringProp name="53">5</stringProp>
-            <stringProp name="48873">180</stringProp>
-          </collectionProp>
-          <collectionProp name="762068837">
-            <stringProp name="53">5</stringProp>
-            <stringProp name="53">5</stringProp>
-            <stringProp name="1572771">3600</stringProp>
+          <collectionProp name="141257141">
+            <stringProp name="50">2</stringProp>
+            <stringProp name="48">0</stringProp>
+            <stringProp name="1722">60</stringProp>
           </collectionProp>
         </collectionProp>
       </kg.apc.jmeter.timers.VariableThroughputTimer>
@@ -40,17 +35,17 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="owner_email" elementType="Argument">
             <stringProp name="Argument.name">owner_email</stringProp>
-            <stringProp name="Argument.value">mcs@mailinator.com</stringProp>
+            <stringProp name="Argument.value">daria@mailinator.com</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="owner_password" elementType="Argument">
             <stringProp name="Argument.name">owner_password</stringProp>
-            <stringProp name="Argument.value">111111</stringProp>
+            <stringProp name="Argument.value">11111111</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="api_host" elementType="Argument">
             <stringProp name="Argument.name">api_host</stringProp>
-            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.value">192.168.100.1</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="api_port" elementType="Argument">
@@ -60,7 +55,7 @@
           </elementProp>
           <elementProp name="oauth_host" elementType="Argument">
             <stringProp name="Argument.name">oauth_host</stringProp>
-            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.value">192.168.100.1</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="oauth_port" elementType="Argument">
@@ -70,7 +65,7 @@
           </elementProp>
           <elementProp name="ws_host" elementType="Argument">
             <stringProp name="Argument.name">ws_host</stringProp>
-            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.value">192.168.100.1</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="ws_port" elementType="Argument">
@@ -255,7 +250,7 @@
         <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
       </ConfigTestElement>
       <hashTree/>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -286,7 +281,7 @@
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
-        <stringProp name="filename"></stringProp>
+        <stringProp name="filename">/Users/mtk12526/Documents/Source/mcs-lite-jmeter-test/result_admin_7688.jtl</stringProp>
       </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="false">
@@ -320,7 +315,7 @@
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
-        <stringProp name="filename"></stringProp>
+        <stringProp name="filename">/Users/mtk12526/Documents/Source/mcs-lite-jmeter-test/result_admin_7688.jtl</stringProp>
       </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Graph" enabled="false">
@@ -354,7 +349,7 @@
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
-        <stringProp name="filename"></stringProp>
+        <stringProp name="filename">/Users/mtk12526/Documents/Source/mcs-lite-jmeter-test/result_admin.jtl</stringProp>
       </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph" enabled="false">
@@ -388,11 +383,11 @@
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
-        <stringProp name="filename"></stringProp>
+        <stringProp name="filename">/Users/mtk12526/Documents/Source/mcs-lite-jmeter-test/result_admin_7688.jtl</stringProp>
         <boolProp name="RespTimeGraph.yaxisnumbergrouping">false</boolProp>
       </ResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="false">
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -423,7 +418,7 @@
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
-        <stringProp name="filename"></stringProp>
+        <stringProp name="filename">/Users/mtk12526/Documents/Source/mcs-lite-jmeter-test/result_admin_7688.jtl</stringProp>
         <longProp name="interval_grouping">5000</longProp>
         <boolProp name="graph_aggregated">true</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -434,7 +429,7 @@
         <boolProp name="exclude_checkbox_state">false</boolProp>
       </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.perfmon.PerfMonCollector guiclass="kg.apc.jmeter.vizualizers.PerfMonGui" testclass="kg.apc.jmeter.perfmon.PerfMonCollector" testname="jp@gc - PerfMon Metrics Collector" enabled="true">
+      <kg.apc.jmeter.perfmon.PerfMonCollector guiclass="kg.apc.jmeter.vizualizers.PerfMonGui" testclass="kg.apc.jmeter.perfmon.PerfMonCollector" testname="jp@gc - PerfMon Metrics Collector" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -465,7 +460,7 @@
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
-        <stringProp name="filename">/Users/mtk12526/Documents/Source/mcs-lite-jmeter-test/resourceUsage.jtl</stringProp>
+        <stringProp name="filename">/Users/mtk12526/Documents/Source/mcs-lite-jmeter-test/resourceUsage_admin.jtl</stringProp>
         <longProp name="interval_grouping">1000</longProp>
         <boolProp name="graph_aggregated">false</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -475,22 +470,22 @@
         <boolProp name="include_checkbox_state">false</boolProp>
         <boolProp name="exclude_checkbox_state">false</boolProp>
         <collectionProp name="metricConnections">
-          <collectionProp name="1223587254">
+          <collectionProp name="1849812025">
             <stringProp name="1247583865">${api_host}</stringProp>
             <stringProp name="1600768">4444</stringProp>
             <stringProp name="66952">CPU</stringProp>
-            <stringProp name="0"></stringProp>
+            <stringProp name="-1909822977">pid=21660</stringProp>
           </collectionProp>
-          <collectionProp name="-1077127067">
+          <collectionProp name="-450902296">
             <stringProp reference="../../collectionProp/stringProp"/>
             <stringProp reference="../../collectionProp/stringProp[2]"/>
             <stringProp name="-1993889503">Memory</stringProp>
-            <stringProp name="0"></stringProp>
+            <stringProp name="-1909822977">pid=21660</stringProp>
           </collectionProp>
         </collectionProp>
       </kg.apc.jmeter.perfmon.PerfMonCollector>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Create Account" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Create Account" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">stopthread</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -709,7 +704,7 @@ log.info(&quot;The user token is: &quot; + userToken);
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time"></stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <longProp name="ThreadGroup.start_time">1487050081000</longProp>
         <longProp name="ThreadGroup.end_time">1487050081000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
@@ -1797,7 +1792,7 @@ log.info(&quot;data chennel ID is &quot; + dataChannelID);</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">20</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <longProp name="ThreadGroup.start_time">1493885580000</longProp>
         <longProp name="ThreadGroup.end_time">1493885580000</longProp>
@@ -2398,6 +2393,53 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
               <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             </HTTPSamplerProxy>
             <hashTree/>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="View Test Device" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/devices/${deviceID}</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="541628484">&quot;deviceId&quot;:&quot;${deviceID}&quot;</stringProp>
+                  <stringProp name="252490164">&quot;deviceKey&quot;:&quot;${deviceKey}&quot;</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
           </hashTree>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="RESTful Upload (CSV)" enabled="false"/>
           <hashTree>

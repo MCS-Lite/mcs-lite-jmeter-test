@@ -15,12 +15,12 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="owner_email" elementType="Argument">
             <stringProp name="Argument.name">owner_email</stringProp>
-            <stringProp name="Argument.value">mcs@mailinator.com</stringProp>
+            <stringProp name="Argument.value">daria@mailinator.com</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="owner_password" elementType="Argument">
             <stringProp name="Argument.name">owner_password</stringProp>
-            <stringProp name="Argument.value">111111</stringProp>
+            <stringProp name="Argument.value">11111111</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="api_host" elementType="Argument">
@@ -285,6 +285,7 @@
             <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
             <assertionsResultsToSave>0</assertionsResultsToSave>
             <bytes>true</bytes>
+            <url>true</url>
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
@@ -791,6 +792,33 @@ if(addProdID.equals(viewProdID)){
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mark as template" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;status&quot;:true}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/api/prototypes/${viewProdID}/templates</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="View Prototype" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -863,7 +891,7 @@ if(prodName.contains(&quot;updated&quot;)){
             </BeanShellAssertion>
             <hashTree/>
           </hashTree>
-          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Delete" enabled="true">
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Delete" enabled="false">
             <stringProp name="ForeachController.inputVal">prodID</stringProp>
             <stringProp name="ForeachController.returnVal">index</stringProp>
             <boolProp name="ForeachController.useSeparator">true</boolProp>
@@ -1992,7 +2020,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Delete" enabled="true">
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Delete" enabled="false">
             <stringProp name="ForeachController.inputVal">deviceID</stringProp>
             <stringProp name="ForeachController.returnVal">index</stringProp>
             <boolProp name="ForeachController.useSeparator">true</boolProp>

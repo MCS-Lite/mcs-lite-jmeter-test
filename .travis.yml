@@ -8,7 +8,7 @@ addons:
 install:
   #Install Jmeter
   - wget -c https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-2.13.tgz
-  - tar -xf apache-jmeter-3.2.tgz
+  - tar -xf apache-jmeter-2.13.tgz
   - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4.jar
   - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4-sources.jar
   - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4-javadoc.jar

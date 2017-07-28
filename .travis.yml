@@ -1,0 +1,50 @@
+language: java
+sudo: true
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+      - nodejs
+install:
+  #Install Jmeter
+  - wget -c https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-2.13.tgz
+  - tar -xf apache-jmeter-2.13.tgz
+  - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4.jar
+  - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4-sources.jar
+  - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4-javadoc.jar
+  - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/maciejzaleski/JMeter-WebSocketSampler/releases/download/version-1.0.2/JMeterWebSocketSampler-1.0.2-SNAPSHOT.jar
+  #Install MCS Lite
+  - wget -c https://github.com/MCS-Lite/mcs-lite-app/releases/download/v1.0.6/7688.tar.gz
+  - tar -xf 7688.tar.gz
+before_script:
+  #Setup Jmeter Assets
+  - ls -al
+  - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/ant-jmeter-1.1.1.jar ./
+  - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/collapse.png ./
+  - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/expand.png ./
+  - ls -al
+  #Setup MCS Lite
+  - cd 7688
+  - node server.js&
+  - cd ..
+branches:
+  only:
+    - master
+    - feature/travis-deploy
+script:
+  - jdk_switcher use oraclejdk8
+  - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13" -Dmcslite.host="localhost" -Dmcslite.port="80"
+deploy:
+  provider: s3
+  access_key_id: AKIAIOOONVMT6LL6EZ2A
+  secret_access_key: 
+    secure: bajGOaHanVj9JY87HeagO6i3v+ZrkZWP0Ml5O4LpkIfsVbr7h7JhYbLWpXLGyln0qVyXAnx0tHbrAqP10FOTrNcPIQqAZ1Ex5yp6DWf9nZJRlTYA0Cp0Hkcm0Mj5TzPpyO9yA4ldNIGiHflivIoCJU4W7IPVX3rC+08pOa8yRKaMXRpTOheW9v6PrjFf4djl7m0hV8Vpo4M04PLhCfU/Q12XqT3bUM5b8Zqojy9acnL9dTfiyVaDxXGO0iYK2zXKNHmiqSNAI7nV72ZUA+8jqWQ0Jg9RC8hqS8xFCorI6C9f1fSIOC8cwAUofqDo+ZWBVmivSrAPJg7zk4W/4Ffg2CpBZPKVvgxo5RcAcWahLxHGTllWehXfZCFMexyTMobHlmcSiKmT+/2dagYotZfozuJLNf3Rw7EwH5Mmk71JMklWEalsj7x4gLP4fvR/bzhf5qZsDQu5927lIdZJzwk3qodStV1biQ17K8MinJQ5GWA/YHxlPDDOp4FDsMGQRMGKin0e/8yN3YwJRkMXbjWBUPBU8Duw/4QxUBU8IPtSH+5tDkIBzNdDYg+OZ40OpGxeoWqZ4gDatJPt2aGE3yhZjMiYB8lBTIuh8y4RhMgdKsZqrf4LcTqGfjaFON+mCJKyop754D0KVcYUqvJ/rJWKKcDOb/krDIxcr3LqwQ7VyiE=
+  bucket: "mcslitetestresult"
+  skip_cleanup: true
+  acl: public_read
+  region: ap-northeast-1
+  local_dir: ./report_*/*.html
+after_deploy:
+  - cd ./
+  - chmod 744 parse_result.sh
+  - sh parse_result.sh || travis_terminate 1;

@@ -32,7 +32,7 @@ branches:
     - feature/travis-deploy
 script:
   - jdk_switcher use oraclejdk8
-  - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="/home/travis/build/dariachen/JmeterExample/apache-jmeter-2.13" -Dmcslite.host="localhost" -Dmcslite.port="80"
+  - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13" -Dmcslite.host="localhost" -Dmcslite.port="80"
 deploy:
   provider: s3
   access_key_id: AKIAIOOONVMT6LL6EZ2A

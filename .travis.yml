@@ -43,7 +43,7 @@ deploy:
   skip_cleanup: true
   acl: public_read
   region: ap-northeast-1
-  local_dir: $TRAVIS_BUILD_DIR/report_*/
+  local_dir: $TRAVIS_BUILD_DIR/report/
 after_deploy:
   - cd ./
   - chmod 744 parse_result.sh

@@ -93,8 +93,8 @@
 
     <delete>
       <fileset dir="${testpath}">
-        <include name="./report_*/*.jtl"/>
-        <include name="./report_*/*.html"/>
+        <include name="./*.jtl"/>
+        <include name="./report/*.html"/>
       </fileset>
     </delete>
 
@@ -109,7 +109,7 @@
         <jmeter
             jmeterhome="${jmeter.home}"
             testplan ="${testpath}/${test}.jmx"
-            resultlog="${testpath}/report_${report.timestamp}/${test}.jtl">
+            resultlog="${testpath}/${test}.jtl">
         <!--
             <jvmarg value="-Xincgc"/>
             <jvmarg value="-Xmx128m"/>
@@ -149,8 +149,8 @@
         <xslt
             classpathref="xslt.classpath"
             force="true"
-            in="${testpath}/report_${report.timestamp}/${test}.jtl"
-            out="${testpath}/report_${report.timestamp}/${test}.html"
+            in="${testpath}/${test}.jtl"
+            out="${testpath}/report/${test}_${report.timestamp}.html"
             style="${testpath}/${stylefile}">
             <param name="showData" expression="${show-data}"/>
             <param name="titleReport" expression="${report.title}"/>

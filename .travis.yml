@@ -25,6 +25,7 @@ before_script:
   #Setup MCS Lite
   - cd 7688
   - node server.js&
+  - cd ..
 branches:
   only:
     - master

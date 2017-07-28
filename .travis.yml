@@ -3,48 +3,46 @@ sudo: true
 addons:
   apt:
     packages:
-      - oracle-java8-installer
-      - nodejs
+    - oracle-java8-installer
+    - nodejs
 install:
-  #Install Jmeter
-  - wget -c https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-2.13.tgz
-  - tar -xf apache-jmeter-2.13.tgz
-  - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4.jar
-  - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4-sources.jar
-  - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4-javadoc.jar
-  - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/maciejzaleski/JMeter-WebSocketSampler/releases/download/version-1.0.2/JMeterWebSocketSampler-1.0.2-SNAPSHOT.jar
-  #Install MCS Lite
-  - wget -c https://github.com/MCS-Lite/mcs-lite-app/releases/download/v1.0.6/7688.tar.gz
-  - tar -xf 7688.tar.gz
+- wget -c https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-2.13.tgz
+- tar -xf apache-jmeter-2.13.tgz
+- wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4.jar
+- wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4-sources.jar
+- wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4-javadoc.jar
+- wget -P ./apache-jmeter-2.13/lib/ext https://github.com/maciejzaleski/JMeter-WebSocketSampler/releases/download/version-1.0.2/JMeterWebSocketSampler-1.0.2-SNAPSHOT.jar
+- wget -c https://github.com/MCS-Lite/mcs-lite-app/releases/download/v1.0.6/7688.tar.gz
+- tar -xf 7688.tar.gz
 before_script:
-  #Setup Jmeter Assets
-  - ls -al
-  - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/ant-jmeter-1.1.1.jar ./
-  - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/collapse.png ./
-  - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/expand.png ./
-  - ls -al
-  #Setup MCS Lite
-  - cd 7688
-  - node server.js&
-  - cd ..
+- ls -al
+- cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/ant-jmeter-1.1.1.jar ./
+- cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/collapse.png ./
+- cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/expand.png ./
+- ls -al
+- cd 7688
+- node server.js&
+- cd ..
 branches:
   only:
-    - master
-    - feature/travis-deploy
+  - master
+  - feature/travis-deploy
 script:
-  - jdk_switcher use oraclejdk8
-  - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13" -Dmcslite.host="localhost" -Dmcslite.port="80"
+- jdk_switcher use oraclejdk8
+- ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13"
+  -Dmcslite.host="localhost" -Dmcslite.port="80"
 deploy:
   provider: s3
-  access_key_id: AKIAIOOONVMT6LL6EZ2A
-  secret_access_key: 
-    secure: bajGOaHanVj9JY87HeagO6i3v+ZrkZWP0Ml5O4LpkIfsVbr7h7JhYbLWpXLGyln0qVyXAnx0tHbrAqP10FOTrNcPIQqAZ1Ex5yp6DWf9nZJRlTYA0Cp0Hkcm0Mj5TzPpyO9yA4ldNIGiHflivIoCJU4W7IPVX3rC+08pOa8yRKaMXRpTOheW9v6PrjFf4djl7m0hV8Vpo4M04PLhCfU/Q12XqT3bUM5b8Zqojy9acnL9dTfiyVaDxXGO0iYK2zXKNHmiqSNAI7nV72ZUA+8jqWQ0Jg9RC8hqS8xFCorI6C9f1fSIOC8cwAUofqDo+ZWBVmivSrAPJg7zk4W/4Ffg2CpBZPKVvgxo5RcAcWahLxHGTllWehXfZCFMexyTMobHlmcSiKmT+/2dagYotZfozuJLNf3Rw7EwH5Mmk71JMklWEalsj7x4gLP4fvR/bzhf5qZsDQu5927lIdZJzwk3qodStV1biQ17K8MinJQ5GWA/YHxlPDDOp4FDsMGQRMGKin0e/8yN3YwJRkMXbjWBUPBU8Duw/4QxUBU8IPtSH+5tDkIBzNdDYg+OZ40OpGxeoWqZ4gDatJPt2aGE3yhZjMiYB8lBTIuh8y4RhMgdKsZqrf4LcTqGfjaFON+mCJKyop754D0KVcYUqvJ/rJWKKcDOb/krDIxcr3LqwQ7VyiE=
-  bucket: "mcslitetestresult"
+  access_key_id: AKIAJAZOGMHKW5DKIFJQ
+  secret_access_key:
+    secure: ZSG12vUCZao2ehg34GL5+wt5jMTrx8naMElJO4qexvjV9RYlB3n9gbxtcAwgosUOGWdCSl/XGlqcUfzUdnFO3wdd2drKoP5c2hO4y9jLKuV+v8TMOaAb8qjlOwhB0ImhzXrDU+e4meVm8ntKP6OalKgHwrF4bzXvqzhkAAwYhKoXcH8l8eRvcV6Q6zukM8t7KXwCSt0dR9SKr1RVByqiHjSRCPMTjD19YMfsWuaFNar5+ykbjXCgYTM3bdQz2d11Oj573m+ExM1JIPcb30afnyy1l+Ajz2d2cK7fym/DAMHW8VU4DPu4tAssSgEcx6DFCXNCDBc1ljrMMD7DA1DjqZ/EG2jHlzXOdhlx5G7OsSW+TqzTFgcXGhI9s1wudaRGffOA6AUUJTCb1dbDj2Iv0Ge3O6X8m6s24UiKFiaigBCmTE4LLFdFCfGLZJ0YnXs8XCuPob+MnTXYqcm04BpCxrILgPVQWy8ipAqVqeOituIsZlkZzvbhjwBugg27sFPoelkGbkYmkHlBzT1WSwJejnsOxL7VvFj68NS4ia6/6Fh5ZBG5zOktTuIcEj//F8hgp7L/QJMk6uOhLiV9c/nnszEdRZfwShiVHFQZ8UBie+F3ogoRR85rrmg7DAKwWB4R/FxXeRHqpPlhX28mWWGnoMO5zM2EzXvSrfjqt4GwpTU=
+  bucket: mcslitetestresult
   skip_cleanup: true
   acl: public_read
   region: ap-northeast-1
   local_dir: $TRAVIS_BUILD_DIR/report/
 after_deploy:
-  - cd ./
-  - chmod 744 parse_result.sh
-  - sh parse_result.sh || travis_terminate 1;
+- cd ./
+- chmod 744 parse_result.sh
+- sh parse_result.sh || travis_terminate 1;
+  

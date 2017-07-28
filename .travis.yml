@@ -21,7 +21,6 @@ before_script:
   - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/ant-jmeter-1.1.1.jar ./
   - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/collapse.png ./
   - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/expand.png ./
-  - ENV
   - ls -al
   #Setup MCS Lite
   - cd 7688

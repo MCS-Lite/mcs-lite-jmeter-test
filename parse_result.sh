@@ -1,5 +1,5 @@
 #!/bin/bash
-if grep 's="false"' ./report_*/*.jtl; then
+if grep 's="false"' ./*.jtl; then
 	echo found erros
 	exit 1
 else

@@ -16,9 +16,11 @@ install:
   # build MCS Lite for testing
 - git clone https://github.com/MCS-Lite/mcs-lite-app.git
 - cd mcs-lite-app/client
+- npm clear cache
 - npm install
 - npm run build:global
 - cd ..
+- npm clear cache
 - npm install
 - npm run build:7688
 - cd out/mcs-lite-app/linux64

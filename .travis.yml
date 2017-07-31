@@ -15,12 +15,11 @@ install:
 - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/maciejzaleski/JMeter-WebSocketSampler/releases/download/version-1.0.2/JMeterWebSocketSampler-1.0.2-SNAPSHOT.jar
   # build MCS Lite for testing
 - git clone https://github.com/MCS-Lite/mcs-lite-app.git
+- git checkout feature/client-package
 - cd mcs-lite-app/client
-- npm cache clean
 - npm install
 - npm run build:global
 - cd ..
-- npm cache clean
 - npm install
 - npm run build:7688
 - cd out/mcs-lite-app/linux64

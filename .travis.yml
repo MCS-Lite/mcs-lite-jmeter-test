@@ -6,27 +6,34 @@ addons:
     - oracle-java8-installer
     - nodejs
 install:
+  # get Jmeter installed
 - wget -c https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-2.13.tgz
 - tar -xf apache-jmeter-2.13.tgz
 - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4.jar
 - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4-sources.jar
 - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4-javadoc.jar
 - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/maciejzaleski/JMeter-WebSocketSampler/releases/download/version-1.0.2/JMeterWebSocketSampler-1.0.2-SNAPSHOT.jar
-- wget -c https://github.com/MCS-Lite/mcs-lite-app/releases/download/v1.0.6/7688.tar.gz
-- tar -xf 7688.tar.gz
+  # build MCS Lite for testing
+- git clone https://github.com/MCS-Lite/mcs-lite-app.git
+- cd mcs-lite-app/client
+- npm install
+- npm run build:global
+- cd ..
+- npm install
+- npm run build:7688
+- cd out/mcs-lite-app/linux64
+- ./mcs-lite-app&
+- cd ../../.. && pwd
 before_script:
 - ls -al
 - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/ant-jmeter-1.1.1.jar ./
 - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/collapse.png ./
 - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/expand.png ./
 - ls -al
-- cd 7688
-- node server.js&
-- cd ..
 branches:
   only:
   - master
-  - feature/travis-deploy
+  - feature/auto-build
 script:
 - jdk_switcher use oraclejdk8
 - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13"

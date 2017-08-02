@@ -819,7 +819,7 @@ if(addProdID.equals(viewProdID)){
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="View Prototype" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="View Prototype" enabled="false">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
               <collectionProp name="Arguments.arguments">
@@ -891,7 +891,7 @@ if(prodName.contains(&quot;updated&quot;)){
             </BeanShellAssertion>
             <hashTree/>
           </hashTree>
-          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Delete" enabled="false">
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Delete" enabled="true">
             <stringProp name="ForeachController.inputVal">prodID</stringProp>
             <stringProp name="ForeachController.returnVal">index</stringProp>
             <boolProp name="ForeachController.useSeparator">true</boolProp>
@@ -2020,7 +2020,7 @@ vars.put(&quot;deviceKey&quot;, deviceKey);</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Delete" enabled="false">
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Delete" enabled="true">
             <stringProp name="ForeachController.inputVal">deviceID</stringProp>
             <stringProp name="ForeachController.returnVal">index</stringProp>
             <boolProp name="ForeachController.useSeparator">true</boolProp>

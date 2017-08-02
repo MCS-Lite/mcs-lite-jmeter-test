@@ -52,5 +52,5 @@ deploy:
 after_deploy:
 - cd ./
 - chmod 744 parse_result.sh
-- sh parse_result.sh || travis_terminate 1;
+- sh parse_result.sh || travis_terminate 1; 
   

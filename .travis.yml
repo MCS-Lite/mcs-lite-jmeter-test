@@ -16,7 +16,6 @@ install:
   # build MCS Lite for testing
 - git clone https://github.com/MCS-Lite/mcs-lite-app.git
 - cd mcs-lite-app/client
-- git checkout feature/client-package
 - npm install
 - npm run build:global
 - cd ..

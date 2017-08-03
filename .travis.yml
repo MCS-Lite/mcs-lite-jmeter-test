@@ -21,8 +21,8 @@ install:
 - cd ..
 - npm install
 - npm run build:7688
-- cd out/mcs-lite-app/linux64
-- ./mcs-lite-app&
+- cd out/mcs-lite-app/7688
+- node server.js&
 - cd ../../../.. && pwd
 before_script:
 - ls -al

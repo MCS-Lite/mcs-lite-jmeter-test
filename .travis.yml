@@ -40,6 +40,8 @@ deploy:
   acl: public_read
   region: ${S3_BUCKET_REGION}
   local_dir: $TRAVIS_BUILD_DIR/report/
+  on:
+    all_branches: true 
 after_deploy:
 - cd ./
 - chmod 744 parse_result.sh

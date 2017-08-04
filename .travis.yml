@@ -34,7 +34,7 @@ deploy:
   provider: s3
   access_key_id: ${S3_BUCKET_ACCESS_ID}
   secret_access_key:
-    secure: ${S3_BUCKET_ACCES_KEY}
+    secure: '${S3_BUCKET_ACCES_KEY}'
   bucket: ${S3_BUCKET_NAME}
   skip_cleanup: true
   acl: public_read

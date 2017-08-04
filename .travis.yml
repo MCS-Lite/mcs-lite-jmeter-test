@@ -33,7 +33,7 @@ deploy:
     secure: jIm59G2eUQ6pvbFlk1KhFrr+4HmM6Y8wFa0Ll3v4hafDCL1dOZdbFXqikb7djdrmQJ6g3XFVOlmMM1SgXUXdCPR3il/2SyFEtuk1DkeAvNDW3OuDkECyS2PwmfT/8lumVamYTNHs9OmKst2Lrh4YwQ89e1zy070jyXer1NW85fBPu7YwwrA5NQA4x8CBtttq096mV0wKZFrendCzM065teKE7KCEc3Dg67pEJpU3ZkV9qr2FKd8JSnRzhhFuFP/3xtzOHIQNXXMizF3hx9rxGKdma+gNh+RqlRec7JoQ9AzAp6MUEIsWVQDTVvLAdRw4gRFResEgZu/EjpgKkdcuapSv8gGLqyvoGO/JpbDBBmlWQWtZtDonRDDRZx8j/z7PheR2y+ZO/lQC0Iy3hijc8oAqO+2LCU7xwQJGuFzSX4RTbY3mMlb/nxskWTWRDmRZ09Cvb6ubJgYd9rAPpFPMmSUzHIQP/G1smeRt7Q3c2guiLTyqmi5NsWHQaaarER4hU72PAc2Kk/GyBOr00VUhO6m8+2eZWSUZCgAbXJOnHC+xgEkXCdoDVO7AcfqGhFqFI3/wzwtlErAqNZbnN5gjO3CrPHeCdEg6r9eohSrtlBtfpiWV5uOb1JsiVNpxBX5mI21KZNETgy52Rn2E2z/wzRplkODtBBT77QF7v/REKQI=
   bucket: mcs-lite-build-bucket
   skip_cleanup: true
-  acl: public_read
+  #acl: public_read
   region: ap-southeast-1
   local_dir: $TRAVIS_BUILD_DIR/report/
   on:

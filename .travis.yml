@@ -22,10 +22,6 @@ before_script:
 - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/collapse.png ./
 - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/expand.png ./
 - ls -al
-branches:
-  only:
-  - master
-  - feature/auto-build
 script:
 - jdk_switcher use oraclejdk8
 - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13"

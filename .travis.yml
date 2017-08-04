@@ -6,24 +6,16 @@ addons:
     - oracle-java8-installer
     - nodejs
 install:
-  # get Jmeter installed
 - wget -c https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-2.13.tgz
 - tar -xf apache-jmeter-2.13.tgz
 - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4.jar
 - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4-sources.jar
 - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4-javadoc.jar
 - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/maciejzaleski/JMeter-WebSocketSampler/releases/download/version-1.0.2/JMeterWebSocketSampler-1.0.2-SNAPSHOT.jar
-  # build MCS Lite for testing
-- git clone https://github.com/MCS-Lite/mcs-lite-app.git
-- cd mcs-lite-app/client
-- npm install
-- npm run build:global
-- cd ..
-- npm install
-- npm run build:7688
-- cd out/mcs-lite-app/7688
+- wget -P https://github.com/MCS-Lite/mcs-lite-app/releases/download/v1.0.6/7688.tar.gz
+- tar -zxf 7688.tar.gz && cd 7688
 - node server.js&
-- cd ../../../.. && pwd
+- cd .. && pwd
 before_script:
 - ls -al
 - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/ant-jmeter-1.1.1.jar ./
@@ -40,16 +32,15 @@ script:
   -Dmcslite.host="localhost" -Dmcslite.port="80"
 deploy:
   provider: s3
-  access_key_id: AKIAJAZOGMHKW5DKIFJQ
+  access_key_id: AKIAJ36FA5PQGVMPSIVA
   secret_access_key:
-    secure: ZSG12vUCZao2ehg34GL5+wt5jMTrx8naMElJO4qexvjV9RYlB3n9gbxtcAwgosUOGWdCSl/XGlqcUfzUdnFO3wdd2drKoP5c2hO4y9jLKuV+v8TMOaAb8qjlOwhB0ImhzXrDU+e4meVm8ntKP6OalKgHwrF4bzXvqzhkAAwYhKoXcH8l8eRvcV6Q6zukM8t7KXwCSt0dR9SKr1RVByqiHjSRCPMTjD19YMfsWuaFNar5+ykbjXCgYTM3bdQz2d11Oj573m+ExM1JIPcb30afnyy1l+Ajz2d2cK7fym/DAMHW8VU4DPu4tAssSgEcx6DFCXNCDBc1ljrMMD7DA1DjqZ/EG2jHlzXOdhlx5G7OsSW+TqzTFgcXGhI9s1wudaRGffOA6AUUJTCb1dbDj2Iv0Ge3O6X8m6s24UiKFiaigBCmTE4LLFdFCfGLZJ0YnXs8XCuPob+MnTXYqcm04BpCxrILgPVQWy8ipAqVqeOituIsZlkZzvbhjwBugg27sFPoelkGbkYmkHlBzT1WSwJejnsOxL7VvFj68NS4ia6/6Fh5ZBG5zOktTuIcEj//F8hgp7L/QJMk6uOhLiV9c/nnszEdRZfwShiVHFQZ8UBie+F3ogoRR85rrmg7DAKwWB4R/FxXeRHqpPlhX28mWWGnoMO5zM2EzXvSrfjqt4GwpTU=
-  bucket: mcslitetestresult
+    secure: DPk63LQ4QKxuj2Ykoopwx8KUIaLFZGfwz1BcRpZbviVKjZvBxoXtMUKH/P42Oaad/typ2K5FOx20o5qF3/uNBkMkBSZkc49fJhhMogSNKkuwm6EJwCh/1Gd49lL5qqRoYGwvGkakIPWq5syQHsHiAwr3GpbVzl8u4PAJ50v1F6gfBOGzYuQmW6dXP7ZAnQZdIxIBimOrvYXxYi30z7Ds0Cqv0bP9jDhVmFr0u1tSJoN7ZLRgiE3Sw2xTVp3GppDtVbJd8rp+ZSxNuonLTx9qljQJgE28C2KQEx0P23PwpVM/w63+u/5ViF1QQh2yF4wKAbNAOA9grLLoLArmU2ONI7VBLfzUmPoJsChXjyD1S2c1UkFzYDav1iuV2BMc6KGpnC3YqGW6eQzfLMUhV+xt48/83OIKxlpwn+EdokX7AdAToJr4Ui2wo++9j+6xGom3uyDMD+nnkqqbznTk59CutxS4+NZWp7BkLBemuLTaeiGGjiY1J4qFq6CDvoAOJca2w2A2tkh+Dz/GQKvrsvUqBA42CQDrVNWhQhwMAx+zIMTi2Ytxt3cPVFaU54R5h0wHg/r1HmkuLufGIt/yeJwpaeAdO4nOAlBr88J525ggWFPoYTkhaXozIT7LzqmLK/zc72JHb0DAITue+1v1P/K87RTakAv2f6kt4Qbb2InzaEc=
+  bucket: ${S3_BUCKET_NAME}
   skip_cleanup: true
   acl: public_read
-  region: ap-northeast-1
+  region: ${S3_BUCKET_REGION}
   local_dir: $TRAVIS_BUILD_DIR/report/
 after_deploy:
 - cd ./
 - chmod 744 parse_result.sh
-- sh parse_result.sh || travis_terminate 1; 
-  
+- sh parse_result.sh || travis_terminate 1;

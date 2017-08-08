@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.2 r1790748">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Environment Setting" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="admin_email" elementType="Argument">
+            <stringProp name="Argument.name">admin_email</stringProp>
+            <stringProp name="Argument.value">admin@mailinator.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="admin_password" elementType="Argument">
+            <stringProp name="Argument.name">admin_password</stringProp>
+            <stringProp name="Argument.value">11111111</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="username" elementType="Argument">
+            <stringProp name="Argument.name">username</stringProp>
+            <stringProp name="Argument.value">Admin</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="api_host" elementType="Argument">
+            <stringProp name="Argument.name">api_host</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="api_port" elementType="Argument">
+            <stringProp name="Argument.name">api_port</stringProp>
+            <stringProp name="Argument.value">3000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="admin_host" elementType="Argument">
+            <stringProp name="Argument.name">admin_host</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="admin_port" elementType="Argument">
+            <stringProp name="Argument.name">admin_port</stringProp>
+            <stringProp name="Argument.value">3002</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="oauth_host" elementType="Argument">
+            <stringProp name="Argument.name">oauth_host</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="oauth_port" elementType="Argument">
+            <stringProp name="Argument.name">oauth_port</stringProp>
+            <stringProp name="Argument.value">3000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ws_host" elementType="Argument">
+            <stringProp name="Argument.name">ws_host</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ws_port" elementType="Argument">
+            <stringProp name="Argument.name">ws_port</stringProp>
+            <stringProp name="Argument.value">8000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ws_protocol" elementType="Argument">
+            <stringProp name="Argument.name">ws_protocol</stringProp>
+            <stringProp name="Argument.value">http</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="oauth_protocol" elementType="Argument">
+            <stringProp name="Argument.name">oauth_protocol</stringProp>
+            <stringProp name="Argument.value">http</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="api_protocol" elementType="Argument">
+            <stringProp name="Argument.name">api_protocol</stringProp>
+            <stringProp name="Argument.value">http</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="admin_protocol" elementType="Argument">
+            <stringProp name="Argument.name">admin_protocol</stringProp>
+            <stringProp name="Argument.value">http</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Data Channel ID" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="display_boolean" elementType="Argument">
+            <stringProp name="Argument.name">display_boolean</stringProp>
+            <stringProp name="Argument.value">display_boolean</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="display_integer" elementType="Argument">
+            <stringProp name="Argument.name">display_integer</stringProp>
+            <stringProp name="Argument.value">display_integer</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="display_category" elementType="Argument">
+            <stringProp name="Argument.name">display_category</stringProp>
+            <stringProp name="Argument.value">display_category</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="display_integer" elementType="Argument">
+            <stringProp name="Argument.name">display_integer</stringProp>
+            <stringProp name="Argument.value">display_integer</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="display_hex" elementType="Argument">
+            <stringProp name="Argument.name">display_hex</stringProp>
+            <stringProp name="Argument.value">display_hex</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="display_string" elementType="Argument">
+            <stringProp name="Argument.name">display_string</stringProp>
+            <stringProp name="Argument.value">display_string</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="display_gps" elementType="Argument">
+            <stringProp name="Argument.name">display_gps</stringProp>
+            <stringProp name="Argument.value">display_gps</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="display_gpio" elementType="Argument">
+            <stringProp name="Argument.name">display_gpio</stringProp>
+            <stringProp name="Argument.value">display_gpio</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="display_pwm" elementType="Argument">
+            <stringProp name="Argument.name">display_pwm</stringProp>
+            <stringProp name="Argument.value">display_pwm</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="control_analog" elementType="Argument">
+            <stringProp name="Argument.name">control_analog</stringProp>
+            <stringProp name="Argument.value">control_analog</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="control_boolean" elementType="Argument">
+            <stringProp name="Argument.name">control_boolean</stringProp>
+            <stringProp name="Argument.value">control_boolean</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="control_category" elementType="Argument">
+            <stringProp name="Argument.name">control_category</stringProp>
+            <stringProp name="Argument.value">control_category</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="control_integer" elementType="Argument">
+            <stringProp name="Argument.name">control_integer</stringProp>
+            <stringProp name="Argument.value">control_integer</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="control_float" elementType="Argument">
+            <stringProp name="Argument.name">control_float</stringProp>
+            <stringProp name="Argument.value">control_float</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="control_hex" elementType="Argument">
+            <stringProp name="Argument.name">control_hex</stringProp>
+            <stringProp name="Argument.value">control_hex</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="control_string" elementType="Argument">
+            <stringProp name="Argument.name">control_string</stringProp>
+            <stringProp name="Argument.value">control_string</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="control_gps" elementType="Argument">
+            <stringProp name="Argument.name">control_gps</stringProp>
+            <stringProp name="Argument.value">control_gps</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="control_gpio" elementType="Argument">
+            <stringProp name="Argument.name">control_gpio</stringProp>
+            <stringProp name="Argument.value">control_gpio</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="control_pwm" elementType="Argument">
+            <stringProp name="Argument.name">control_pwm</stringProp>
+            <stringProp name="Argument.value">control_pwm</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="control_gamepad" elementType="Argument">
+            <stringProp name="Argument.name">control_gamepad</stringProp>
+            <stringProp name="Argument.value">control_gamepad</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="display_float" elementType="Argument">
+            <stringProp name="Argument.name">display_float</stringProp>
+            <stringProp name="Argument.value">display_float</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="display_image" elementType="Argument">
+            <stringProp name="Argument.name">display_image</stringProp>
+            <stringProp name="Argument.value">display_image</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="display_video" elementType="Argument">
+            <stringProp name="Argument.name">display_video</stringProp>
+            <stringProp name="Argument.value">display_video</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Create Admin Account" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1502102024000</longProp>
+        <longProp name="ThreadGroup.end_time">1502102024000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${admin_host}</stringProp>
+          <stringProp name="HTTPSampler.port">${admin_port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${admin_protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+          <stringProp name="CookieManager.policy">standard</stringProp>
+          <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
+        </CookieManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Sign up" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">userName=${username}&amp;email=${admin_email}&amp;password=${admin_password}&amp;password2=${admin_password}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/api/admin</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Get Admin Token" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1502102190000</longProp>
+        <longProp name="ThreadGroup.end_time">1502102190000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${admin_host}</stringProp>
+          <stringProp name="HTTPSampler.port">${admin_port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${admin_protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+          <stringProp name="CookieManager.policy">standard</stringProp>
+          <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
+        </CookieManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Sign in" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">email=${admin_email}&amp;password=${admin_password}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/oauth/login</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+            <stringProp name="RegexExtractor.refname">TOKEN</stringProp>
+            <stringProp name="RegexExtractor.regex">token=(.+?);</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">NoTokenAvailable</stringProp>
+            <stringProp name="RegexExtractor.match_number"></stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Verify Cookie" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;token&quot;:&quot;${TOKEN}&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/oauth/cookies</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">import com.eclipsesource.json.*;
+
+String jsonString = prev.getResponseDataAsString();
+JsonObject responseJson = JsonObject.readFrom(jsonString);
+JsonObject resultJson=responseJson.get(&quot;results&quot;);
+
+String adminToken=resultJson.get(&quot;access_token&quot;).asString();
+String adminEmail=resultJson.get(&quot;email&quot;).asString();
+String adminNickName=resultJson.get(&quot;userName&quot;).asString();
+String adminId=resultJson.get(&quot;userId&quot;).asString();
+
+
+props.put(&quot;adminAuthorization&quot;, &quot;Bearer &quot; + adminToken);
+
+props.put(&quot;adminEmail&quot;, adminEmail);
+props.put(&quot;adminNickName&quot;, adminNickName);
+props.put(&quot;adminId&quot;, adminId);
+
+log.info(&quot;The user is: &quot; + adminEmail + &quot;, &quot; + adminNickName + &quot;, &quot; + adminId);
+log.info(&quot;The user token is: &quot; + adminToken);
+</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1502102190000</longProp>
+        <longProp name="ThreadGroup.end_time">1502102190000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree/>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="WorkBench" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>

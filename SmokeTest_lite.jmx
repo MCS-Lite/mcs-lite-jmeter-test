@@ -3,7 +3,7 @@
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
-      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.functional_mode">true</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments"/>
@@ -66,21 +66,6 @@
           <elementProp name="api_protocol" elementType="Argument">
             <stringProp name="Argument.name">api_protocol</stringProp>
             <stringProp name="Argument.value">http</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="prodID" elementType="Argument">
-            <stringProp name="Argument.name">prodID</stringProp>
-            <stringProp name="Argument.value"></stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="deviceID" elementType="Argument">
-            <stringProp name="Argument.name">deviceID</stringProp>
-            <stringProp name="Argument.value"></stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="deviceKey" elementType="Argument">
-            <stringProp name="Argument.name">deviceKey</stringProp>
-            <stringProp name="Argument.value"></stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="username" elementType="Argument">
@@ -252,10 +237,11 @@
             <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
             <assertionsResultsToSave>0</assertionsResultsToSave>
             <url>true</url>
+            <hostname>true</hostname>
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
-        <stringProp name="filename">/Users/mtk12526/Documents/Source/mcs-lite-jmeter-test/results.jtl</stringProp>
+        <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
@@ -277,7 +263,7 @@
             <subresults>true</subresults>
             <responseData>false</responseData>
             <samplerData>false</samplerData>
-            <xml>false</xml>
+            <xml>true</xml>
             <fieldNames>false</fieldNames>
             <responseHeaders>false</responseHeaders>
             <requestHeaders>false</requestHeaders>

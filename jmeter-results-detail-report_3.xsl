@@ -146,7 +146,7 @@
 </xsl:template>
 
 <xsl:template name="pageHeader">
-	<h1>MCS API SMOKE Test</h1>
+	<h1>MCS Lite API SMOKE Test</h1>
 	<table width="100%">
 		<tr>
 			<td align="left"></td>

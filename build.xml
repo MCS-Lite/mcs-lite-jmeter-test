@@ -118,7 +118,7 @@
             
         -->
         	<jmeterarg value="-Jworking_dir=${testpath}" />
-        	<jmeterarg value="-Jmcslite_host=${lite.port}" />
+        	<jmeterarg value="-Jmcslite_host=${lite.host}" />
         	<jmeterarg value="-Jmcslite_port=${lite.port}" />
             <!-- Force suitable defaults -->
             <property name="jmeter.save.saveservice.output_format" value="xml"/>

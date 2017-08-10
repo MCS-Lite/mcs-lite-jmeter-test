@@ -21,12 +21,12 @@ before_script:
 - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/ant-jmeter-1.1.1.jar ./
 - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/collapse.png ./
 - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/expand.png ./
+- cp -f jmeter.properties $TRAVIS_BUILD_DIR/apache-jmeter-2.13/bin
 - ls -al
 script:
 - jdk_switcher use oraclejdk8
 - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13"
   -Dmcslite.host="localhost" -Dmcslite.port="80"
-- cp SmokeTest_lite.jtl ./report
 deploy:
   provider: s3
   access_key_id: AKIAJ36FA5PQGVMPSIVA

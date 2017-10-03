@@ -12,6 +12,12 @@ install:
 - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4-sources.jar
 - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/ralfstx/minimal-json/releases/download/0.9.4/minimal-json-0.9.4-javadoc.jar
 - wget -P ./apache-jmeter-2.13/lib/ext https://github.com/maciejzaleski/JMeter-WebSocketSampler/releases/download/version-1.0.2/JMeterWebSocketSampler-1.0.2-SNAPSHOT.jar
+- wget -P ./apache-jmeter-2.13/lib/ext http://central.maven.org/maven2/org/eclipse/jetty/websocket/websocket-client/9.3.7.RC1/websocket-client-9.3.7.RC1.jar
+- wget -P ./apache-jmeter-2.13/lib/ext http://central.maven.org/maven2/org/eclipse/jetty/websocket/websocket-api/9.3.7.RC1/websocket-api-9.3.7.RC1.jar
+- wget -P ./apache-jmeter-2.13/lib/ext http://central.maven.org/maven2/org/eclipse/jetty/websocket/websocket-common/9.3.7.RC1/websocket-common-9.3.7.RC1.jar
+- wget -P ./apache-jmeter-2.13/lib/ext http://central.maven.org/maven2/org/eclipse/jetty/jetty-http/9.3.7.RC1/jetty-http-9.3.7.RC1.jar
+- wget -P ./apache-jmeter-2.13/lib/ext http://central.maven.org/maven2/org/eclipse/jetty/jetty-io/9.3.7.RC1/jetty-io-9.3.7.RC1.jar
+- wget -P ./apache-jmeter-2.13/lib/ext http://central.maven.org/maven2/org/eclipse/jetty/jetty-util/9.3.7.RC1/jetty-util-9.3.7.RC1.jar
 - wget -c https://s3-${S3_BUCKET_REGION}.amazonaws.com/${S3_BUCKET_NAME}/7688/${UPSTREAM_TRAVIS_BUILD_NUMBER}/7688.tar.gz
 - tar -zxf 7688.tar.gz && cd 7688
 - node server.js&
@@ -26,7 +32,7 @@ before_script:
 script:
 - jdk_switcher use oraclejdk8
 - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13"
-  -Dmcslite.host="localhost" -Dmcslite.port="80"
+  -Dmcslite.host="localhost" -Dmcslite.port="3000"
 deploy:
   provider: s3
   access_key_id: AKIAJ36FA5PQGVMPSIVA

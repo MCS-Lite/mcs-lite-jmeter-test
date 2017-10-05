@@ -49,3 +49,11 @@ after_deploy:
 - cd ./
 - chmod 744 parse_result.sh
 - sh parse_result.sh || travis_terminate 1;
+notifications:
+  email:
+    recipients:
+      - mtk.mcs.lite@gmail.com
+    on_success: change
+    on_failure: always
+
+

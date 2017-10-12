@@ -19,7 +19,6 @@ install:
 - wget -P ./apache-jmeter-2.13/lib/ext http://central.maven.org/maven2/org/eclipse/jetty/jetty-io/9.3.7.RC1/jetty-io-9.3.7.RC1.jar
 - wget -P ./apache-jmeter-2.13/lib/ext http://central.maven.org/maven2/org/eclipse/jetty/jetty-util/9.3.7.RC1/jetty-util-9.3.7.RC1.jar
 - wget -c https://s3-${S3_BUCKET_REGION}.amazonaws.com/${S3_BUCKET_NAME}/7688/${UPSTREAM_TRAVIS_BUILD_NUMBER}/7688.tar.gz
-- cd .. && pwd
 before_script:
 - ls -al
 - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/ant-jmeter-1.1.1.jar ./

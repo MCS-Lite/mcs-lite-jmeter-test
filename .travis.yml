@@ -29,7 +29,8 @@ before_script:
 script:
 - jdk_switcher use oraclejdk8
 - tar -zxf 7688.tar.gz
-- cd 7688 && node server.js& && pwd && ls -al
+- cd 7688 && node server.js&
+- pwd && ls -al
 - cd .. && pwd && ls -al
 - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13"
   -Dmcslite.host="localhost" -Dmcslite.port="3000"

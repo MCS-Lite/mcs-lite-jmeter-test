@@ -5,6 +5,8 @@ addons:
     packages:
     - oracle-java8-installer
     - nodejs
+services:
+- docker
 install:
 - wget -c https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-2.13.tgz
 - tar -xf apache-jmeter-2.13.tgz
@@ -34,7 +36,7 @@ script:
   -Dmcslite.host="localhost" -Dmcslite.port="3000"
 - kill -9 $(lsof -t -i:3000)
 - docker pull mysql:latest
-- docker run --name mcslite-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=mcslite -e MYSQL_USER=travis -e MYSQL_PASSWORD=1234 -d mysql:latest
+- docker run --name mcslite-mysql -p 3307:3306 -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=mcslite -e MYSQL_USER=travis -e MYSQL_PASSWORD=1234 -d mysql:latest
 - docker logs mcslite-mysql
 - wget -r -P ./7688/configs/ https://s3.amazonaws.com/mcsbuildarchive/db.json
 - node ./7688/migration.js

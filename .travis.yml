@@ -30,8 +30,6 @@ script:
 - jdk_switcher use oraclejdk8
 - tar -zxf 7688.tar.gz
 - cd 7688 && node server.js&
-- pwd && ls -al
-- cd .. && pwd && ls -al
 - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13"
   -Dmcslite.host="localhost" -Dmcslite.port="3000"
 - kill -9 $(lsof -t -i:3000)
@@ -41,7 +39,6 @@ script:
 - wget -r -P ./7688/configs/ https://s3.amazonaws.com/mcsbuildarchive/db.json
 - node ./7688/migration.js
 - cd 7688 && node server.js&
-- cd .. && pwd
 - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13"
   -Dmcslite.host="localhost" -Dmcslite.port="3000"
 - kill -9 $(lsof -t -i:3000)

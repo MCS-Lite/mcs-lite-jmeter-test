@@ -93,7 +93,7 @@
 
     <delete>
       <fileset dir="${testpath}">
-        <include name="./*.jtl"/>
+       <!-- <include name="./*.jtl"/> -->
         <include name="./report/*.html"/>
       </fileset>
     </delete>

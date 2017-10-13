@@ -5,6 +5,8 @@ addons:
     packages:
     - oracle-java8-installer
     - nodejs
+services:
+- docker
 install:
 - wget -c https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-2.13.tgz
 - tar -xf apache-jmeter-2.13.tgz
@@ -19,9 +21,6 @@ install:
 - wget -P ./apache-jmeter-2.13/lib/ext http://central.maven.org/maven2/org/eclipse/jetty/jetty-io/9.3.7.RC1/jetty-io-9.3.7.RC1.jar
 - wget -P ./apache-jmeter-2.13/lib/ext http://central.maven.org/maven2/org/eclipse/jetty/jetty-util/9.3.7.RC1/jetty-util-9.3.7.RC1.jar
 - wget -c https://s3-${S3_BUCKET_REGION}.amazonaws.com/${S3_BUCKET_NAME}/7688/${UPSTREAM_TRAVIS_BUILD_NUMBER}/7688.tar.gz
-- tar -zxf 7688.tar.gz && cd 7688
-- node server.js&
-- cd .. && pwd
 before_script:
 - ls -al
 - cp $TRAVIS_BUILD_DIR/apache-jmeter-2.13/extras/ant-jmeter-1.1.1.jar ./
@@ -31,8 +30,20 @@ before_script:
 - ls -al
 script:
 - jdk_switcher use oraclejdk8
+- tar -zxf 7688.tar.gz
+- cd 7688 && node server.js&
 - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13"
   -Dmcslite.host="localhost" -Dmcslite.port="3000"
+- kill -9 $(lsof -t -i:3000)
+- docker pull mysql:latest
+- docker run --name mcslite-mysql -p 3307:3306 -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=mcslite -e MYSQL_USER=travis -e MYSQL_PASSWORD=1234 -d mysql:latest
+- docker logs mcslite-mysql
+- wget -r -P ./7688/configs/ https://s3.amazonaws.com/mcsbuildarchive/db.json
+- node ./7688/migration.js
+- cd 7688 && node server.js&
+- ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13"
+  -Dmcslite.host="localhost" -Dmcslite.port="3000"
+- kill -9 $(lsof -t -i:3000)
 deploy:
   provider: s3
   access_key_id: AKIAJ36FA5PQGVMPSIVA

@@ -231,7 +231,7 @@
 
 			<xsl:if test="$failureCount > 0">
 			    <xsl:variable name="tcid" select="substring-before(@lb, ',')" />
-				<h3><a href="{concat('https://htcsense.jira.com/wiki/pages/viewpage.action?pageId=18874601#GetStarted(Aurora)-',$tcid)}"><xsl:value-of select="@lb" /></a><a><xsl:attribute name="name"><xsl:value-of select="@lb" /></xsl:attribute></a></h3>
+				<h3><xsl:value-of select="@lb" /><a><xsl:attribute name="name"><xsl:value-of select="@lb" /></xsl:attribute></a></h3>
 
 				<table class="detailList" border="0" cellpadding="5" cellspacing="2" width="1000px">
 				<tr valign="top">

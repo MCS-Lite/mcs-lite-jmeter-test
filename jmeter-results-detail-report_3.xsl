@@ -231,18 +231,20 @@
 
 			<xsl:if test="$failureCount > 0">
 			    <xsl:variable name="tcid" select="substring-before(@lb, ',')" />
-				<h3><a href="{concat('https://htcsense.jira.com/wiki/pages/viewpage.action?pageId=18874601#GetStarted(Aurora)-',$tcid)}"><xsl:value-of select="@lb" /></a><a><xsl:attribute name="name"><xsl:value-of select="@lb" /></xsl:attribute></a></h3>
+				<h3><xsl:value-of select="@lb" /><a><xsl:attribute name="name"><xsl:value-of select="@lb" /></xsl:attribute></a></h3>
 
 				<table class="detailList" border="0" cellpadding="5" cellspacing="2" width="1000px">
+				<xsl:for-each select="/testResults/*[@lb = current()/@lb][attribute::s='false']">
+				<tr valign="top">
+					<th colspan="4" style="background: #3A89C9; color: #FFFFFF"><i>Thread Name: <xsl:value-of select="@tn" /></i></th>
+				</tr>
 				<tr valign="top">
 					<th>Response</th>
 					<th colspan="3">Failure Message</th>
 					<xsl:if test="$showData = 'y'">
 					   <th>Response Data</th>
 					</xsl:if>
-				</tr>
-			
-				<xsl:for-each select="/testResults/*[@lb = current()/@lb][attribute::s='false']">
+				</tr>		
 					<tr>
 						<td width="10%"><b><xsl:value-of select="@rc | @rs" /> - <xsl:value-of select="@rm" /></b></td>
 						<td colspan="3"><xsl:value-of select="assertionResult/failureMessage" /></td>

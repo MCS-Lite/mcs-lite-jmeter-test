@@ -46,7 +46,7 @@
     
     <property name="testpath" value="${user.dir}"/>
     <property name="jmeter.home" value="${basedir}/.."/>
-    <property name="report.title" value="Load Test Results"/>
+    <property name="report.title" value="API Smoke Test Results"/>
     <property name="stylefile" value="jmeter-results-detail-report_3.xsl"/>
     
     <!-- Name of test (without .jmx) -->
@@ -120,6 +120,7 @@
         	<jmeterarg value="-Jworking_dir=${testpath}" />
         	<jmeterarg value="-Jmcslite_host=${lite.host}" />
         	<jmeterarg value="-Jmcslite_port=${lite.port}" />
+            <jmeterarg value="-Jmcslite_db=${lite.db}" />
             <!-- Force suitable defaults -->
             <property name="jmeter.save.saveservice.output_format" value="xml"/>
             <property name="jmeter.save.saveservice.assertion_results" value="all"/>

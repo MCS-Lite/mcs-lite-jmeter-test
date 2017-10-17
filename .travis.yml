@@ -32,15 +32,14 @@ before_script:
 script:
 - jdk_switcher use oraclejdk8
 - tar -zxf 7688.tar.gz
-- cd 7688 && node server.js&
+- cd ./7688 && node server.js&
 - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13"
   -Dmcslite.host="localhost" -Dmcslite.port="3000" -Dlite.db="NeDB"
 - kill -9 $(lsof -t -i:3000)
 - rm -f ./report/*.html
 - wget -r -O ./7688/configs/db.json https://s3.amazonaws.com/mcsbuildarchive/db.json
-- cd ./7688 && node migration.js
+- cd ./7688 && node migration.js && node server.js&
 - pwd
-- cd ./7688 && node server.js&
 - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13"
   -Dlite.host="localhost" -Dlite.port="3000" -Dlite.db="SQL"
 - kill -9 $(lsof -t -i:3000)

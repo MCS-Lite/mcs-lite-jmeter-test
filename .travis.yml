@@ -38,8 +38,9 @@ script:
 - kill -9 $(lsof -t -i:3000)
 - rm -f ./report/*.html
 - wget -r -O ./7688/configs/db.json https://s3.amazonaws.com/mcsbuildarchive/db.json
-- cd ./7688 && node migration.js && node server.js&
-- pwd
+- cd ./7688 && node migration.js
+- node server.js&
+- cd .. && pwd
 - ant -buildfile build.xml -Dtestpath=./ -Dtest=SmokeTest_lite -Djmeter.home="$TRAVIS_BUILD_DIR/apache-jmeter-2.13"
   -Dlite.host="localhost" -Dlite.port="3000" -Dlite.db="SQL"
 - kill -9 $(lsof -t -i:3000)
